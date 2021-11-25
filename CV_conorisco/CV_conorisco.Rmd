@@ -77,16 +77,20 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
 
 **Bioinformatics**. Analysis of microarray/bulk RNA-seq datasets analysis using the DESeq2 and EdgeR packages. Single cell analysis using Scater within SingleCellExperiment, pySCENIC, Velocyto, Seurat, FlowCore, FlowSOM, CytofKit. Dimensionality reduction: PCA, t-SNE and UMAP. Progression analysis using monocle3, Destiny and RNA velocity. Clustering using Phonograph, DevSM, FlowSOM hclust and treeclust.
 
-# Formal Training
+# Grants
 ```{r}
-train <- read_excel("../data/training.xlsx")
-train<- train[-c(1:2),] # remove descriptive title
-train %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+
+gra <- read_excel("../data/grants.xlsx")
+gra<- gra[-c(1:2),] # remove descriptive title
+gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
                          when = when, # to right
                          why = why , # sub-subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
+
 ```
+*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), Sep 2017.
+
 \newpage
 # Presentations
 ## Oral
@@ -108,7 +112,7 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
               with = where)
 ```
 
-# OUTREACH AND ORGANISATION
+# Outreach and organisation
 
 * **Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, 8 weeks’ full-time. 
 
@@ -119,19 +123,16 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
 * **School talk**, Oaklands Community College, Edenderry Co. Offaly. “The life of a scientist”. 2021
 * **Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
 
-# Grants
+# Formal Training
 ```{r}
-
-gra <- read_excel("../data/grants.xlsx")
-gra<- gra[-c(1:2),] # remove descriptive title
-gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+train <- read_excel("../data/training.xlsx")
+train<- train[-c(1:2),] # remove descriptive title
+train %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
                          when = when, # to right
                          why = why , # sub-subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
-
 ```
-*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), Sep 2017.
 
 \newpage
 
