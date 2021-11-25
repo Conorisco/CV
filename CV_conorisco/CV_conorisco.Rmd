@@ -4,19 +4,28 @@ surname: Finlay
 position: "Senior Research Fellow"
 address: "Trinity Translational Medicines Insitute, Trinity College Dublin"
 phone: +353 857148825
+profilepic: Conor.jpeg
 #www: "github.com/Conorisco"
 email: "cofinlay@tcd.ie; conor.finlay@manchester.ac.uk"
 twitter: conorisco
 github: conorisco
+#headcolor:
 orcid: 0000-0001-8285-0903
 #linkedin: mariecurie
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
+aboutme: "Cellular immunologist with bioinformatics skills"
+#docname: "Conor Finlay CV.pdf"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(tidyverse)
+library(readr)
+library(readxl)
+library(rorcid)
+myor <- "0000-0001-8285-0903"
 ```
 
 # Research interests 
@@ -29,27 +38,192 @@ I am a cellular Immunologist with three core skills: *in vivo* models of inflamm
  * Trinity Kidney Health Centre, Prof. Mark A Little.
 
 ## Honorary Research Fellow, University of Manchester
- * COVID19 Strategic partnership
- * TCD Single cell Core development
- * Trinity Kidney Health Centre, Prof. Mark A Little.
-
-
-# Education
-
+ * Co-managing Medical Research Council programme grant with Prof Allen
+ * Bioinformatics collaborations 
+ * Core facility engagement
+ 
+# Past Employment
 ```{r}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Informal studies", "1889-91", "Flying University", "Warsaw, Poland",
-  "Master of Physics", "1893", "Sorbonne Université", "Paris, France",
-  "Master of Mathematics", "1894", "Sorbonne Université", "Paris, France"
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+emp <- read_excel("../data/employment.xlsx") 
+emp <- emp[-c(1:2),] # remove descriptive title
+emp %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+```
+\newpage
+# Education
+```{r}
+edu <- read_excel("../data/education.xlsx") 
+edu <- edu[-c(1:2),] # remove descriptive title
+cols <- colnames(edu)
+edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+
+```
+# SKILLS
+
+ **Animal models of Disease**: Experimental autoimmune encephalomyelitis, Litomosoides sigmodontis infection, OVA/Alum and dust mite-induced airway hypersensitivity, dextran sodium sulphate-induced colitis, circadian rhythm modulation, B16 melanoma, Sterile peritonitis, IL-4-complex administration, House airway hypersensitivity, Fasciola hepatica infection, Bordetella pertussis infection.
+
+**Laboratory techniques**: In vitro cell culture, FACS & MACS cell sorting, flow cytometry, mass cytometry, tissue digestion, ELISA, enzyme assays, RT-qPCR, confocal microscopy, Amnis Image Stream, sample preparation for mass spectrometry and single cell RNA-sequencing. Basic experience with PCR, genotyping, immunoblots and library preparation for Next Generation Sequencing.
+
+**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curation and integration.    
+
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Phyton (Intermediate), Unix/Bash (Beginner). Data analysis/visualisation in and in R using Tidyverse and ggplot2. Advanced user of Microsoft Office applications, TreeStar FlowJo and GraphPad Prism. Competent user of Adobe Illustrator and pathway analysis tools e.g. IPA. Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. Basic knowledge of computer science and use of high-performance computer clusters. 
+
+**Bioinformatics**. Analysis of microarray/bulk RNA-seq datasets analysis using the DESeq2 and EdgeR packages. Single cell analysis using Scater within SingleCellExperiment, pySCENIC, Velocyto, Seurat, FlowCore, FlowSOM, CytofKit. Dimensionality reduction: PCA, t-SNE and UMAP. Progression analysis using monocle3, Destiny and RNA velocity. Clustering using Phonograph, DevSM, FlowSOM hclust and treeclust.
+
+# Formal Training
+```{r}
+train <- read_excel("../data/training.xlsx")
+train<- train[-c(1:2),] # remove descriptive title
+train %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+```
+\newpage
+# Presentations
+## Oral
+```{r}
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
+```
+## Poster
+```{r}
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
 ```
 
-# Nobel Prizes
+# OUTREACH AND ORGANISATION
+
+* **Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, 8 weeks’ full-time. 
+
+* **10th International Symposium on Bordetella**, Sep 2013. Logistics manager responsible for operations of the conference including registration, AV equipment and support for speakers.
+
+* **Manchester Immunology Group Seminar Series**, May 2017 – Sep 2018. Co-lead organiser. Handling invitations, hospitality, communications, for renowned international speakers to visit University of Manchester.
+
+* **School talk**, Oaklands Community College, Edenderry Co. Offaly. “The life of a scientist”. 2021
+* **Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
+
+# Grants
+```{r}
+
+gra <- read_excel("../data/grants.xlsx")
+gra<- gra[-c(1:2),] # remove descriptive title
+gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+
+```
+*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), Sep 2017.
+
+\newpage
+
+# Awards
+```{r}
+awards <- read_excel("../data/awards.xlsx")
+awards<- awards[-c(1:2),] # remove descriptive title
+awards %>% arrange(desc(when))  %>% brief_entries(
+              what = with ,# middle
+              when = when  # left
+    ) # right
+
+```
+# Teaching
+```{r}
+t <- read_excel("../data/teaching.xlsx")
+t<- t[-c(1:2),] # remove descriptive title
+t  %>% arrange(desc(when)) %>% brief_entries(
+              with= what ,# middle
+              when = when,
+              what = with# left
+    ) # right
+
+```
+
+Other duties include Undergraduate practical supervision, tutorials, and organising visits of school students as various points between 2013-2016. [Introduction to data scientists for immunologists course available here](https://conorisco.github.io/dataviz_immunology_r/  ). Acting as an official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester.
+
+# Supervision
+```{r}
+sup <- read_excel("../data/supervison.xlsx")
+sup<- sup[-c(1:2),] # remove descriptive title
+sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+
+```
+
+
+# Other Contributions 
+
+## Reviewing
+```{r}
+rev <- read_excel("../data/reviewing.xlsx")
+rev<- rev[-c(1:2),] # remove descriptive title
+rev  %>% arrange(desc(when)) %>% brief_entries(
+              what = what,# middle
+              when = when,
+              with = with
+                # left
+    ) # right
+
+```
+
+## Society Membership
+
+* British Society of immunology 
+* Irish society of Immunology
+* International Cytokine & Interferon Society 
+
+
+# Publications
 
 ```{r}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
+
+bibliography_entries("My collection.bib") %>%
+  arrange(desc(issued))
+```
+## Articles in submitted or in preperation
+
+Finlay, CM, Parkinson, JP, Chan, BHK, Prise, I, Morrison, A, Ruckerl, D, Ajendra J,Chenery, A, Konkel, K, Boon, L, Baker, SM, Loke, P and Allen, JE. Genotype specific conversion into tissue macrophages requires IL-4R signalling in addition to cell intrinsic regulatory mechanisms during type 2 immunity. 
+
+Finlay, CM, . Parkinson, JP., Chan, BHK. and Allen, JE Pleural fluid of mice 
+
+
+# Referees
+```{r}
+ref <- read_excel("../data/referees.xlsx")
+ref<- ref[-c(1:2),] # remove descriptive title
+ref %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+```
+
+CV made in `Rmarkdown` with `Vitae` R package
+
+```{r eval=FALSE}
 tribble(
   ~Year, ~Type, ~Desc,
   1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
@@ -62,13 +236,13 @@ tribble(
   )
 ```
 
-# Publications
-
-```{r}
-library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "packages.bib")
-
-bibliography_entries("packages.bib") %>%
-  arrange(desc(author$family), issued)
+```{r eval=FALSE}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Informal studies", "1889-91", "Flying University", "Warsaw, Poland",
+  "Master of Physics", "1893", "Sorbonne Université", "Paris, France",
+  "Master of Mathematics", "1894", "Sorbonne Université", "Paris, France"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
 ```
-
