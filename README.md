@@ -1,2 +1,2 @@
 # CV
-My CV made with the Vitae R package, with code form a variety of github pages.
+My CV made with the Vitae R package, with code form a variety of github pages which I am indebtted to. 
