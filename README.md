@@ -11,6 +11,7 @@ Built using a publication list exported from Mendeley and using custom tables in
 ## To do
 
 - [x] Complete draft 1
+- [ ] Scrub student names or identifiable information 
 - [x] Make public
 - [ ] Go into more detail on current roles and emphasize project management experience 
 - [ ] streamline text size
