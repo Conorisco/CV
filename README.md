@@ -2,7 +2,7 @@
 
 My academic CV made with the `Vitae R` package, with code from a variety of github pages which I am indebted to. 
 
-long forn pdf CV available [here](https://github.com/Conorisco/CV/blob/main/CV_conorisco/CV_conorisco.pdf)
+long form pdf CV available [here](https://github.com/Conorisco/CV/blob/main/CV_conorisco/CV_conorisco.pdf)
 
 Written in `rmarkdown` and exported using `tintex` to create LaTeX pdf 
 
