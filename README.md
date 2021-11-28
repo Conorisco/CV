@@ -6,7 +6,7 @@ long form pdf CV available [here](https://github.com/Conorisco/CV/blob/main/CV_c
 
 Written in `rmarkdown` and exported using `tintex` to create LaTeX pdf 
 
-Built using a publication list exported from Mendeley and using custom tables in excel.
+Built using a publication list exported from Mendeley desktop and using custom tables in excel.
 
 ## To do
 
