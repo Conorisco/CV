@@ -132,7 +132,7 @@ bibliography_entries("My collection.bib") %>%
 ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
-   annotate("text", x=2015, y=140, label= paste('Citations:',l$total_cites, ', h-index:', l$h_index)) +
+   annotate("text", x=2011.5, y=130, label= paste('h-index:', l$h_index)) +
   geom_point(size=3, color='red') +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank())
