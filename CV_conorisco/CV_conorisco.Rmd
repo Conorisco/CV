@@ -29,6 +29,7 @@ aboutme: "Cellular immunologist with bioinformatic skills"
 #install.packages("readxl")
 #install.packages("knitr")
 #install.packages('tinytex')
+#install.packages("gridExtra")
 #tinytex::install_tinytex() # installs LaTeX - some issues on windows (but only some)
 # knitting for first time will take a while as it appears to install a bunch of tools for latex on run 1
 ```
@@ -36,11 +37,10 @@ aboutme: "Cellular immunologist with bioinformatic skills"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot')
+pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot','gridExtra')
 lapply(pacs, library, character.only=TRUE) #%>% invisible()
 myor <- "0000-0001-8285-0903"
 myscol <- 'kQ6U7AkAAAAJ'
-#vitae::twentyseconds
 ```
 
 ```{r google scholar, include=FALSE}
@@ -132,11 +132,12 @@ bibliography_entries("My collection.bib") %>%
 ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
-   annotate("text", x=2015, y=135, label= paste('Citations:',l$total_cites, ', h-index:', l$h_index)) +
+   annotate("text", x=2015, y=140, label= paste('Citations:',l$total_cites, ', h-index:', l$h_index)) +
   geom_point(size=3, color='red') +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank())
 ```
+
 
 # Presentations
 ## Oral
