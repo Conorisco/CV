@@ -1,3 +1,5 @@
+[![](./CV_conorisco/front.png)](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco.pdf)
+
 # CV generated in R
 
 My academic CV made with the `Vitae R` package, with code from a variety of github pages which I am indebted to including Brian Jenks https://github.com/tallguyjenks
