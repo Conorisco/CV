@@ -1,13 +1,14 @@
 # CV
 
-My academic CV made with the `Vitae R` package, with code from a variety of github pages which I am indebted to. 
-
-Rationale: Before discovering `Vitae` I had a CV written in Word. The word-based CV was created while I was still a teenager, probably appying for a lifeguard job. It had all these horrible formatting and anchors that made working with it like communing with a annoying comptuter poltergeist. 
-
-I always wanted to learn LaTeX but never got round to it. I fell in love with `Rmarkdown` and was delighted when I found out it had LaTeX converter using a LaTeX template form `Vitae`. 
+My academic CV made with the `Vitae R` package, with code from a variety of github pages which I am indebted to including Brian Jenks https://github.com/tallguyjenks
 
 long form pdf CV available [here](https://github.com/Conorisco/CV/blob/main/CV_conorisco/CV_conorisco.pdf)
 Short form pdf CV - TBC
+
+
+Rationale: Before discovering `Vitae` I had a CV written in Word. The word-based CV was created while I was still a teenager, probably when I applied to be a lifeguard. The .doc condtained horrible formatting and Word 'anchors' that made editing incredibly frustrating.  
+
+I always wanted to learn LaTeX. I fell in love with `Rmarkdown` and was delighted when I found out it had LaTeX converter using LaTeX templates.
 
 Written in `rmarkdown` and exported using `tintex` to create LaTeX pdf 
 
