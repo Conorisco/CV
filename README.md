@@ -1,4 +1,4 @@
-[![](./CV_conorisco/front.png)](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco.pdf)
+[![](./CV_conorisco/front.PNG)](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco.pdf)
 
 # CV generated in R
 
