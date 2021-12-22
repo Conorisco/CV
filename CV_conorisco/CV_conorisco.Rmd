@@ -128,6 +128,7 @@ bibliography_entries("My collection.bib") %>%
 
 ```
 <!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
+
 ```{r fig.height=1.4, fig.width=2.4}
 ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
