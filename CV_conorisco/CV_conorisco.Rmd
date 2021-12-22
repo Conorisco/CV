@@ -57,7 +57,7 @@ I am a cellular Immunologist with three core skills: *in vivo* models of inflamm
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
  * COVID19 Science Foundation Ireland-funded strategic partnership
- * TCD Single cell Core development
+ * TCD Single Cell Core development
  * Trinity Kidney Health Centre, Prof. Mark A Little.
 
 ## Honorary Research Fellow, University of Manchester
@@ -94,9 +94,9 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
 
 **Laboratory techniques**: In vitro cell culture, FACS & MACS cell sorting, flow cytometry (expert), mass cytometry, tissue digestion, ELISA, enzyme assays, RT-qPCR, confocal microscopy, Amnis Image Stream, sample preparation for mass spectrometry and single cell RNA-sequencing. Basic experience with PCR, genotyping, immunoblots and library preparation for Next Generation Sequencing.
 
-**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curation and integration.    
+**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curating and integration: data analysis of longitudinal clinical datasets with 100s of clincal fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Phyton (Intermediate), Unix/Bash (Beginner). Data analysis/visualisation in and in R using Tidyverse and ggplot2. Advanced user of Microsoft Office applications, TreeStar FlowJo and GraphPad Prism. Competent user of Adobe Illustrator and pathway analysis tools e.g. IPA. Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. Basic knowledge of computer science and use of high-performance computer clusters. 
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Python (Intermediate), RMarkdown (Intermediate) Unix/Bash (Beginner). Data analysis/visualisation in and in R using Tidyverse and ggplot2. Advanced user of Microsoft Office applications, TreeStar FlowJo and GraphPad Prism. Competent user of Adobe Illustrator and pathway analysis tools e.g. IPA. Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. Basic knowledge of computer science and use of high-performance computer clusters. 
 
 **Bioinformatics**. Analysis of microarray/bulk RNA-seq datasets analysis using the DESeq2 and EdgeR packages. Single cell analysis using Scater within SingleCellExperiment, pySCENIC, Velocyto, Seurat, FlowCore, FlowSOM, CytofKit. Dimensionality reduction: PCA, t-SNE and UMAP. Progression analysis using monocle3, Destiny and RNA velocity. Clustering using Phonograph, DevSM, FlowSOM hclust and treeclust.
 
@@ -132,7 +132,7 @@ bibliography_entries("My collection.bib") %>%
 ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
-   annotate("text", x=2011.5, y=130, label= paste('h-index:', l$h_index)) +
+   annotate("text", x=2011.5, y=150, label= paste('h-index:', l$h_index)) +
   geom_point(size=3, color='red') +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank())
