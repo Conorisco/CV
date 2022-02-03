@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular immunologist & bioinformatician"
+aboutme: "Cellular immunologist"
 #docname: "Conor Finlay CV.pdf"
 headcolor: 	050583
 fontsize: 10pt
@@ -54,7 +54,7 @@ ct <- get_citation_history(myscol)
 
 
 # Research interests 
-Cellular Immunologist with three core skills: *in vivo* models of inflammation, bioinformatics and clinical research. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions and myeloid cells. 
+Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions and myeloid cells. 
 
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
@@ -105,6 +105,8 @@ bibliography_entries("My collection.bib") %>%
 Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid  
 
 O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
+
+Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M. Finlay, C.M. and Little, M. Characterisation of low density neutrophils in SARS-Cov 2 patients (running title)
 
 \newpage
 # Funding
