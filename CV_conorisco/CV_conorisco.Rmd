@@ -201,6 +201,7 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 **Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
 
 \newpage
+
 # Referees
 ```{r}
 ref <- read_excel("../data/referees.xlsx")
@@ -215,7 +216,6 @@ ref %>% detailed_entries(what = what, #subtitle
 \newpage
 
 # Appendix
-
 ## Shortlisted applications
 *	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
 * Shortlisted as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
