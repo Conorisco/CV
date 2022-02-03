@@ -16,11 +16,12 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular immunologist with bioinformatic skills"
+aboutme: "Cellular immunologist & bioinformatician"
 #docname: "Conor Finlay CV.pdf"
-#headcolor: 414141
+headcolor: 	050583
+fontsize: 10pt
 ---
-
+<!-- #\fontsize{11}{18}{8}{8} -->
 ```{r install packages, include=FALSE}
 #install.packages("tidyverse")
 #install.packages("vitae")
@@ -41,6 +42,7 @@ pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','sch
 lapply(pacs, library, character.only=TRUE) #%>% invisible()
 myor <- "0000-0001-8285-0903"
 myscol <- 'kQ6U7AkAAAAJ'
+col <- "#050583"
 ```
 
 ```{r google scholar, include=FALSE}
@@ -52,20 +54,19 @@ ct <- get_citation_history(myscol)
 
 
 # Research interests 
-I am a cellular Immunologist with three core skills: *in vivo* models of inflammation, bioinformatics and clinical research. My current research obsession is the regulation of mononuclear phagocyte differentiation during inflammation on a single cell level. 
+Cellular Immunologist with three core skills: *in vivo* models of inflammation, bioinformatics and clinical research. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions and myeloid cells. 
 
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
- * COVID19 Science Foundation Ireland-funded strategic partnership
- * TCD Single Cell Core development
- * Trinity Kidney Health Centre, Prof. Mark A Little.
+ * COVID19 Science Foundation Ireland-funded strategic partnership.
+ * Chairing the development of a new core facility service in single cell RNA-sequencing ("TCD Single Cell")
+ * Trinity Kidney Health Centre, lab management and clinical research.
 
 ## Honorary Research Fellow, University of Manchester
- * Co-managing Medical Research Council programme grant with Prof Allen
- * Bioinformatics collaborations 
- * Core facility engagement
- 
-# Past Employment
+ * Co-managing *MRC* programme grant with Prof. Judith Allen includes bi-monthly visits and weekly online meetings
+ * Collaborations with Judith Allen, Mark Travis and Matthew Hepworth groups (providing bioinformatics analysis)
+
+# Employment History
 ```{r}
 emp <- read_excel("../data/employment.xlsx") 
 emp <- emp[-c(1:2),] # remove descriptive title
@@ -75,7 +76,7 @@ emp %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
 ```
-\newpage
+
 # Education
 ```{r}
 edu <- read_excel("../data/education.xlsx") 
@@ -88,18 +89,24 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 
 ```
-# Skills
 
- **Animal models of Disease**: Experimental autoimmune encephalomyelitis, Litomosoides sigmodontis infection, OVA/Alum and dust mite-induced airway hypersensitivity, dextran sodium sulphate-induced colitis, circadian rhythm modulation, B16 melanoma, Sterile peritonitis, IL-4-complex administration, House airway hypersensitivity, Fasciola hepatica infection, Bordetella pertussis infection.
+# Publications
+```{r}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
 
-**Laboratory techniques**: In vitro cell culture, FACS & MACS cell sorting, flow cytometry (expert), mass cytometry, tissue digestion, ELISA, enzyme assays, RT-qPCR, confocal microscopy, Amnis Image Stream, sample preparation for mass spectrometry and single cell RNA-sequencing. Basic experience with PCR, genotyping, immunoblots and library preparation for Next Generation Sequencing.
+bibliography_entries("My collection.bib") %>%
+  arrange(desc(issued))
 
-**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curating and integration: data analysis of longitudinal clinical datasets with 100s of clincal fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
+```
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Python (Intermediate), RMarkdown (Intermediate) Unix/Bash (Beginner). Data analysis/visualisation in and in R using Tidyverse and ggplot2. Advanced user of Microsoft Office applications, TreeStar FlowJo and GraphPad Prism. Competent user of Adobe Illustrator and pathway analysis tools e.g. IPA. Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. Basic knowledge of computer science and use of high-performance computer clusters. 
+## In preparation
 
-**Bioinformatics**. Analysis of microarray/bulk RNA-seq datasets analysis using the DESeq2 and EdgeR packages. Single cell analysis using Scater within SingleCellExperiment, pySCENIC, Velocyto, Seurat, FlowCore, FlowSOM, CytofKit. Dimensionality reduction: PCA, t-SNE and UMAP. Progression analysis using monocle3, Destiny and RNA velocity. Clustering using Phonograph, DevSM, FlowSOM hclust and treeclust.
+Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid  
 
+O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
+
+\newpage
 # Funding
 ```{r}
 
@@ -113,34 +120,19 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), Sep 2017.
+# Skills
 
+ **Animal models of Disease**: Expert in design and execution of animal experiments. Models include: Experimental autoimmune encephalomyelitis, *L. sigmodontis* infection, airway hypersensitivity, colitis, circadian rhythm modulation, B16 melanoma, peritonitis models, cytokine administration, *F. hepatica* infection, *B. pertussis* infection.
 
-\newpage
+**Laboratory techniques**: *In vitro* Expert in cell culture and preparation of cells for downstream analysis with particular expertise in single cell technologies. Skills include: cell sorting, high paratmer (20+) flow cytometry , mass cytometry (including panel design), tissue digestion, ELISA, enzyme assays, RT-qPCR, confocal microscopy, Amnis Image Stream. 
 
-# Publications
-```{r}
-library(dplyr)
-#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
+**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curating and integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
 
-bibliography_entries("My collection.bib") %>%
-  arrange(desc(issued))
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Python (Intermediate), RMarkdown (Intermediate) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator,  Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. high-performance computing. 
 
-```
-<!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
+**Bioinformatics**. Library preparation and QC for Next Generation Sequencing. Major interest in analysis of single cell RNA-sequencing datasets in R and python (3 years experience). Mass cytometery analysis. Analysis of microarray/bulk RNA-seq datasets analysis in R. Pathway analysis, regulatory network analysis, clustering, dimention reduction etc.
 
-```{r fig.height=1.4, fig.width=2.4}
-ggplot(ct, aes(year, cites)) +
-    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
-  ylab('Citations') +
-   annotate("text", x=2011.5, y=150, label= paste('h-index:', l$h_index)) +
-  geom_point(size=3, color='red') +
-  theme_cowplot(font_size = 10) +
-  theme(axis.title.x = element_blank())
-```
-
-
-# Presentations
+# Presentations & awards
 ## Oral
 ```{r}
 pres <- read_excel("../data/presentations.xlsx")
@@ -159,8 +151,7 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
               when = when,
               with = where)
 ```
-
-# Awards
+## Awards
 ```{r}
 awards <- read_excel("../data/awards.xlsx")
 awards<- awards[-c(1:2),] # remove descriptive title
@@ -168,21 +159,10 @@ awards %>% arrange(desc(when))  %>% brief_entries(
               what = with ,# middle
               when = when  # left
     ) # right
-
 ```
-# Outreach and organisation
-
-* **Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, 8 weeks’ full-time. 
-
-* **10th International Symposium on Bordetella**, Sep 2013. Logistics manager responsible for operations of the conference including registration, AV equipment and support for speakers.
-
-* **Manchester Immunology Group Seminar Series**, May 2017 – Sep 2018. Co-lead organiser. Handling invitations, hospitality, communications, for renowned international speakers to visit University of Manchester.
-
-* **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. “The life of a scientist”. 
-* **Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
-
-
-# Teaching
+\newpage
+# Teaching & Supervison
+## Lecturing
 ```{r}
 t <- read_excel("../data/teaching.xlsx")
 t<- t[-c(1:2),] # remove descriptive title
@@ -196,7 +176,7 @@ t  %>% arrange(desc(when)) %>% brief_entries(
 
 Other duties include Undergraduate practical supervision, tutorials, and organising visits of school students as various points between 2013-2016. [Introduction to data scientists for immunologists course available here](https://conorisco.github.io/dataviz_immunology_r/  ). Acting as an official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester.
 
-# Supervision
+## Supervision
 ```{r}
 sup <- read_excel("../data/supervison.xlsx")
 sup<- sup[-c(1:2),] # remove descriptive title
@@ -207,40 +187,39 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 
 ```
-# Training
-## Formal
+
+# Outreach and organisation
+
+**Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, 8 weeks’ full-time. 
+
+**10th International Symposium on Bordetella**, Sep 2013. Logistics manager responsible for operations of the conference including registration, AV equipment and support for speakers.
+
+**Manchester Immunology Group Seminar Series**, May 2017 – Sep 2018. Co-lead organiser. Handling invitations, hospitality, communications, for renowned international speakers to visit University of Manchester.
+
+**School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. “The life of a scientist”. 
+
+**Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
+
+\newpage
+# Referees
 ```{r}
-train <- read_excel("../data/training.xlsx")
-train<- train[-c(1:2),] # remove descriptive title
-train %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+ref <- read_excel("../data/referees.xlsx")
+ref<- ref[-c(1:2),] # remove descriptive title
+ref %>% detailed_entries(what = what, #subtitle
                          when = when, # to right
-                         why = why , # sub-subtitle
+                        # why = why , # sub-subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
 ```
 
-## Courses
-```{r}
+\newpage
 
-cor <- read_excel("../data/courses.xlsx")
+# Appendix
 
-
-TCD <- cor$`Trinity College Dublin`
-Manchester <- cor$`University of Manchester`
-#external <- cor$Other
-
-classes <- tibble(
-  title =c(
-          rep("University of MAnchester",length(Manchester)),
-          rep("Trinity College Dublin", length(TCD))), 
-              detail = c(Manchester,TCD))
-classes %>%
-  detailed_entries(
-    what = title,
-    why = detail, .protect = F
-  )
-```
-# Other Contributions 
+## Shortlisted applications
+*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
+* Shortlisted as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
+* Shortlisted for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
 
 ## Reviewing
 ```{r}
@@ -255,6 +234,42 @@ rev  %>% arrange(desc(when)) %>% brief_entries(
 
 ```
 
+## Training
+
+```{r}
+train <- read_excel("../data/training.xlsx")
+#train<- train[-c(1:2),] # remove descriptive title
+train  %>% arrange(desc(Year)) %>% brief_entries(
+              what = Course,# middle
+              when = Year,# left
+              with = Insitution# right
+                
+    ) 
+
+```
+
+## Courses
+```{r}
+
+cor <- read_excel("../data/courses.xlsx")
+
+
+TCD <- cor$`Trinity College Dublin`
+Manchester <- cor$`University of Manchester`
+#external <- cor$Other
+
+classes <- tibble(
+  title =c(
+          rep("University of Manchester",length(Manchester)),
+          rep("Trinity College Dublin", length(TCD))), 
+              detail = c(Manchester,TCD))
+classes %>%
+  detailed_entries(
+    what = title,
+    why = detail, .protect = F
+  )
+```
+
 ## Societies and committees
 ```{r}
 
@@ -267,7 +282,7 @@ com <- soc$`TCD Committees`
 classes <- tibble(
   title =c(
           rep("Society Membership",length(socs)),
-          rep("Internall Comittees", length(com))), 
+          rep("College Comittees", length(com))), 
               detail = c(socs,com))
 classes %>%
   detailed_entries(
@@ -276,15 +291,19 @@ classes %>%
   )
 ```
 
-# Referees
-```{r}
-ref <- read_excel("../data/referees.xlsx")
-ref<- ref[-c(1:2),] # remove descriptive title
-ref %>% detailed_entries(what = what, #subtitle
-                         when = when, # to right
-                        # why = why , # sub-subtitle
-                         with = with, # Major title
-                         where =  where) #Rightmost)
+## Citations
+<!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
+
+```{r fig.height=2, fig.width=2.6}
+ggplot(ct, aes(year, cites)) +
+    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
+  ylab('Citations') +
+  labs(caption = "Citations per year. Source: Google Scholar") +
+   annotate("text", x=2011.5, y=150, label= paste('h-index:', l$h_index)) +
+  geom_point(size=3, color= col) +
+  theme_cowplot(font_size = 10) +
+  theme(axis.title.x = element_blank(),
+         plot.caption = element_text(face = "italic"))
 ```
 
 
