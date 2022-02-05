@@ -54,7 +54,7 @@ ct <- get_citation_history(myscol)
 
 
 # Research interests 
-Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions and myeloid cells. 
+Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells data visualisation and programming.
 
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
@@ -293,7 +293,7 @@ classes %>%
   )
 ```
 
-## Citations
+## Citation metrics
 <!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
 
 ```{r fig.height=2, fig.width=2.6}
