@@ -25,12 +25,11 @@ Built using a publication list exported from Mendeley desktop and using custom t
 - [x] Complete draft 1
 - [x] Scrub student names or identifiable information 
 - [x] Make public
-- [ ] Go into more detail on current roles and emphasize project management experience 
-- [ ] streamline text size
+- [X] Go into more detail on current roles and emphasize project management experience 
+- [X] streamline text size by editing letex variables in .cls file
 - [ ] build tables for skills using `kable()` to create a more impactful and shorter list of skills
-- [ ] Automatically update publications from orcid
+- [ ] Automatically update publications from orcid/Google scholar rather than manually from citatioin manager
 - [ ] programmatically create short and long form CV
-- [ ] programmatically handle page breaks for each subheading
 - [x] goggle scholar integration - create some graphs, might be a bit too goofy.
 - [ ] add a table of number of corresponding, first author and senior author papers
 - [ ] Create data-science focused non-acedemic CV
