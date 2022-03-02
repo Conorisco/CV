@@ -100,11 +100,11 @@ bibliography_entries("My collection.bib") %>%
 
 ```
 
-## In preparation
+## Unpublished manuscipts in preparation
 
-Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid  
+Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid (running title)
 
-O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
+O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis (running title)
 
 Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M. Finlay, C.M. and Little, M. Characterisation of low density neutrophils in SARS-Cov 2 patients (running title)
 
