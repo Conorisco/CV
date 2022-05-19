@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular immunologist"
+aboutme: "Cellular Immunologist with bioinformatics experience"
 #docname: "Conor Finlay CV.pdf"
 headcolor: 	050583
 fontsize: 10pt
@@ -54,7 +54,7 @@ ct <- get_citation_history(myscol)
 
 
 # Research interests 
-Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells data visualisation and programming.
+Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming.
 
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
@@ -124,15 +124,18 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 # Skills
 
- **Animal models of Disease**: Expert in design and execution of animal experiments. Models include: Experimental autoimmune encephalomyelitis, *L. sigmodontis* infection, airway hypersensitivity, colitis, circadian rhythm modulation, B16 melanoma, peritonitis models, cytokine administration, *F. hepatica* infection, *B. pertussis* infection.
+ **Animal models of Disease**: 12 years experience in in vivo model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-**Laboratory techniques**: *In vitro* Expert in cell culture and preparation of cells for downstream analysis with particular expertise in single cell technologies. Skills include: cell sorting, high paratmer (20+) flow cytometry , mass cytometry (including panel design), tissue digestion, ELISA, enzyme assays, RT-qPCR, confocal microscopy, Amnis Image Stream. 
 
-**Clinical research**: Preparation of cells from human blood. Biobanking, clinical database management. Patient stratification and statistical analysis. Working in as part of a multi-disciplinary scientific-clinical research team. Data curating and integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
+**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (20+) flow cytometry, mass cytometry (including panel design), tissue digestion, ELISA, lab management, inventory, ordering, health and saftey. 
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent), Python (Intermediate), RMarkdown (Intermediate) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator,  Strong background in statistics and its application to experimental design and interpretation of results. Database creation and maintenance. Creation of Shiny Apps. high-performance computing. 
+**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quanitiative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. 
 
-**Bioinformatics**. Library preparation and QC for Next Generation Sequencing. Major interest in analysis of single cell RNA-sequencing datasets in R and python (3 years experience). Mass cytometery analysis. Analysis of microarray/bulk RNA-seq datasets analysis in R. Pathway analysis, regulatory network analysis, clustering, dimention reduction etc.
+**Clinical research**: Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap). Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
+
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 5 years), Python (Intermediate, 3 years), RMarkdown (Intermediate, 3 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic). 
+
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (4 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2). Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA, PAC-map), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). 
 
 # Presentations & awards
 ## Oral
@@ -162,7 +165,7 @@ awards %>% arrange(desc(when))  %>% brief_entries(
               when = when  # left
     ) # right
 ```
-\newpage
+<!-- \newpage -->
 # Teaching & Supervison
 ## Lecturing
 ```{r}
@@ -176,7 +179,7 @@ t  %>% arrange(desc(when)) %>% brief_entries(
 
 ```
 
-Other duties include Undergraduate practical supervision, tutorials, and organising visits of school students as various points between 2013-2016. [Introduction to data scientists for immunologists course available here](https://conorisco.github.io/dataviz_immunology_r/  ). Acting as an official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester.
+**Other teaching related duties** Undergraduate practical supervision, tutorials, and organising visits of school students as various points between 2013-2016. [Introduction to data scientists for immunologists course (click here)](https://conorisco.github.io/dataviz_immunology_r/  ). Official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. Assessor for the PhD continuation viva (2022). Interview panel for Post-doctoral researcher (2022) and research assistant (2021). 
 
 ## Supervision
 ```{r}
@@ -200,9 +203,9 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. “The life of a scientist”. 
 
-**Single Cell TCD Core facility**. I formed a working group in 2021 in Trinity college dublin to address the competitive disadvantage of not having a working single cell RNA-sequencing. My aim is to deliver a single cell RNA-seq service to TCD researchers on a cost per service basis that will act as a platform to develop a full core facility service.
+**Single Cell TCD Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this sercive to include external industry clinets.
 
-\newpage
+<!-- \newpage -->
 
 # Referees
 ```{r}
@@ -296,15 +299,17 @@ classes %>%
 ## Citation metrics
 <!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
 
-```{r fig.height=2, fig.width=2.6}
+```{r fig.height=2, fig.width=2.5}
 ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
   labs(caption = "Citations per year. Source: Google Scholar") +
-   annotate("text", x=2011.5, y=150, label= paste('h-index:', l$h_index)) +
+   annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
+  scale_x_continuous(breaks = c(2010:2022)) +
   geom_point(size=3, color= col) +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1),
          plot.caption = element_text(face = "italic"))
 ```
 
