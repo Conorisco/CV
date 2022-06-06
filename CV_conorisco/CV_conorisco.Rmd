@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist with bioinformatics experience"
+aboutme: "Cellular Immunology and bioinformatics"
 #docname: "Conor Finlay CV.pdf"
 headcolor: 	050583
 fontsize: 10pt
@@ -38,7 +38,7 @@ fontsize: 10pt
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot','gridExtra')
+pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot','gridExtra','patchwork')
 lapply(pacs, library, character.only=TRUE) #%>% invisible()
 myor <- "0000-0001-8285-0903"
 myscol <- 'kQ6U7AkAAAAJ'
@@ -59,7 +59,7 @@ Cellular Immunologist with three core skills: *in vivo* **models of inflammation
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
  * COVID19 Science Foundation Ireland-funded strategic partnership.
- * Chairing the development of a new core facility service in single cell RNA-sequencing ("TCD Single Cell")
+ * Core facility development in single cell RNA-sequencing ("TCD Single Cell")
  * Trinity Kidney Health Centre, lab management and clinical research.
 
 ## Honorary Research Fellow, University of Manchester
@@ -102,11 +102,12 @@ bibliography_entries("My collection.bib") %>%
 
 ## Unpublished manuscipts in preparation
 
+Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients
+
 Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid (running title)
 
 O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis (running title)
 
-Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M. Finlay, C.M. and Little, M. Characterisation of low density neutrophils in SARS-Cov 2 patients (running title)
 
 \newpage
 # Funding
@@ -126,16 +127,15 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
  **Animal models of Disease**: 12 years experience in in vivo model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-
 **Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (20+) flow cytometry, mass cytometry (including panel design), tissue digestion, ELISA, lab management, inventory, ordering, health and saftey. 
 
-**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quanitiative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. 
+**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quanitiative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. 
 
 **Clinical research**: Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap). Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
 
 **Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 5 years), Python (Intermediate, 3 years), RMarkdown (Intermediate, 3 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic). 
 
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (4 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2). Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA, PAC-map), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). 
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (4 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2). Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). 
 
 # Presentations & awards
 ## Oral
@@ -169,17 +169,40 @@ awards %>% arrange(desc(when))  %>% brief_entries(
 # Teaching & Supervison
 ## Lecturing
 ```{r}
+#teaching short version 
+# t <- read_excel("../data/teaching.xlsx")
+# t<- t[-c(1:2),] # remove descriptive title
+# t  %>% arrange(desc(when)) %>% brief_entries(
+#               with= what ,# middle
+#               when = when,
+#               what = with# left
+#     ) # right
+
 t <- read_excel("../data/teaching.xlsx")
-t<- t[-c(1:2),] # remove descriptive title
-t  %>% arrange(desc(when)) %>% brief_entries(
-              with= what ,# middle
-              when = when,
-              what = with# left
-    ) # right
+
+
+
+t %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
 
 ```
 
-**Other teaching related duties** Undergraduate practical supervision, tutorials, and organising visits of school students as various points between 2013-2016. [Introduction to data scientists for immunologists course (click here)](https://conorisco.github.io/dataviz_immunology_r/  ). Official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. Assessor for the PhD continuation viva (2022). Interview panel for Post-doctoral researcher (2022) and research assistant (2021). 
+```{r}
+# #teaching long version 
+# t <- read_excel("../data/teaching.xlsx")
+# t<- t[-c(1:2),] # remove descriptive title
+# t  %>% arrange(desc(when)) %>% brief_entries(
+#               with= what ,# middle
+#               when = when,
+#               what = with# left
+#     ) # right
+
+```
+
+**Other teaching related duties** In 2016 took on all academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits of school students as various points between 2013-2016. I have developed a 12 hour course in basic data science skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/  ). I acted as official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class. 
 
 ## Supervision
 ```{r}
@@ -226,7 +249,7 @@ ref %>% detailed_entries(what = what, #subtitle
 * Shortlisted as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
 * Shortlisted for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
 
-## Reviewing
+## Miscillenious contributions 
 ```{r}
 rev <- read_excel("../data/reviewing.xlsx")
 rev<- rev[-c(1:2),] # remove descriptive title
@@ -299,18 +322,41 @@ classes %>%
 ## Citation metrics
 <!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
 
-```{r fig.height=2, fig.width=2.5}
-ggplot(ct, aes(year, cites)) +
+```{r fig.height=2, fig.width=6}
+p1<- ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
   labs(caption = "Citations per year. Source: Google Scholar") +
    annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
+     annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
   scale_x_continuous(breaks = c(2010:2022)) +
   geom_point(size=3, color= col) +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(angle = 45, hjust = 1),
          plot.caption = element_text(face = "italic"))
+
+# p1
+papers <- read_excel("../data/Publication details.xlsx")
+
+mytheme <- gridExtra::ttheme_default(
+    core = list(fg_params=list(cex = 0.5)),
+    colhead = list(fg_params=list(cex = 0.6)),
+    rowhead = list(fg_params=list(cex = 0.6)))
+
+p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
+
+
+grid.arrange(p1, p2,
+             nrow=1,
+             as.table=TRUE)
+```
+```{r}
+
+
+
+
+
 ```
 
 
