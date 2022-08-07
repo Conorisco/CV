@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist with mutidiciplary skills in inflamamtion, bioinformatics and clinical research"
+aboutme: "Immunologist with mutidiciplary skills in cellular, molecular, bioinformatics and clinical research"
 #docname: "Conor Finlay CV.pdf"
 headcolor: 	050583
 fontsize: 10pt
