@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunology and bioinformatics"
+aboutme: "Cellular Immunologist with mutidiciplary skills in inflamamtion, bioinformatics and clinical research"
 #docname: "Conor Finlay CV.pdf"
 headcolor: 	050583
 fontsize: 10pt
@@ -35,7 +35,6 @@ fontsize: 10pt
 # knitting for first time will take a while as it appears to install a bunch of tools for latex on run 1
 ```
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot','gridExtra','patchwork')
@@ -49,22 +48,22 @@ col <- "#050583"
 l <- get_profile(myscol)
 p <- get_publications(myscol)
 ct <- get_citation_history(myscol)
-
 ```
 
-
-# Research interests 
-Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming.
+<!-- # Research interests  -->
+<!-- Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming. -->
+# Snapshot
+I am an energetic ambitious immunologist with a clear goal to build an independent research platform. My research passion is which factors control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease. My most recent work is currently under revision in the top ranked Immunology journal (IF 31). I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries in Immunology.
 
 # Current Roles
 ## Senior Research Fellow, Trinity College Dublin
- * COVID19 Science Foundation Ireland-funded strategic partnership.
+ * COVID-19 SFI-funded strategic partnership, investigating myeloid cell dysfunction in COVID-19
  * Core facility development in single cell RNA-sequencing ("TCD Single Cell")
- * Trinity Kidney Health Centre, lab management and clinical research.
+ * Trinity Kidney Health Centre, lab management and biomarker research.
 
 ## Honorary Research Fellow, University of Manchester
  * Co-managing *MRC* programme grant with Prof. Judith Allen includes bi-monthly visits and weekly online meetings
- * Collaborations with Judith Allen, Mark Travis and Matthew Hepworth groups (providing bioinformatics analysis)
+ * Ongoing collaborations with Judith Allen, Doug Dyer, Mark Travis and Matthew Hepworth groups
 
 # Employment History
 ```{r}
@@ -90,26 +89,7 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
 
 ```
 
-# Publications
-```{r}
-library(dplyr)
-#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
-
-bibliography_entries("My collection.bib") %>%
-  arrange(desc(issued))
-
-```
-
-## Unpublished manuscipts in preparation
-
-Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients
-
-Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. Contribution of tissue resident macrophages to the proteome of the pleural fluid (running title)
-
-O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis (running title)
-
-
-\newpage
+<!-- \newpage -->
 # Funding
 ```{r}
 
@@ -123,7 +103,11 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-# Skills
+# Scientific Skills
+
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 5 years), Python (Intermediate, 3 years), RMarkdown (Intermediate, 3 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic). 
+
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (4 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2). Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). 
 
  **Animal models of Disease**: 12 years experience in in vivo model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
@@ -133,41 +117,9 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 **Clinical research**: Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap). Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists. 
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 5 years), Python (Intermediate, 3 years), RMarkdown (Intermediate, 3 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic). 
-
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (4 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2). Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). 
-
-# Presentations & awards
-## Oral
-```{r}
-pres <- read_excel("../data/presentations.xlsx")
-pres<- pres[-c(1:2),] # remove descriptive title
-pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-              what = with,# middle
-              when = when,
-              with = where)
-```
-## Poster
-```{r}
-pres <- read_excel("../data/presentations.xlsx")
-pres<- pres[-c(1:2),] # remove descriptive title
-pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
-              what = with,# middle
-              when = when,
-              with = where)
-```
-## Awards
-```{r}
-awards <- read_excel("../data/awards.xlsx")
-awards<- awards[-c(1:2),] # remove descriptive title
-awards %>% arrange(desc(when))  %>% brief_entries(
-              what = with ,# middle
-              when = when  # left
-    ) # right
-```
 <!-- \newpage -->
 # Teaching & Supervison
-## Lecturing
+## Formal teaching 
 ```{r}
 #teaching short version 
 # t <- read_excel("../data/teaching.xlsx")
@@ -202,9 +154,9 @@ t %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-**Other teaching related duties** In 2016 took on all academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits of school students as various points between 2013-2016. I have developed a 12 hour course in basic data science skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/  ). I acted as official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class. 
+**Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits for school students at various points between 2013-2016. I have developed a 12 hour course in basic data science skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/  ). I acted as official ‘external mentor’ of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class. 
 
-## Supervision
+## Young scientist supervision
 ```{r}
 sup <- read_excel("../data/supervison.xlsx")
 sup<- sup[-c(1:2),] # remove descriptive title
@@ -218,7 +170,7 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 
 # Outreach and organisation
 
-**Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, 8 weeks’ full-time. 
+**Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, organising a team of 50 researchers in leading themed tours of scientific facilities. We were the most subscribed event of Dublin Research Night (>500 members of the public) 8 weeks’ full-time. 
 
 **10th International Symposium on Bordetella**, Sep 2013. Logistics manager responsible for operations of the conference including registration, AV equipment and support for speakers.
 
@@ -229,6 +181,34 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 **Single Cell TCD Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this sercive to include external industry clinets.
 
 <!-- \newpage -->
+# Presentations & awards
+## Oral
+```{r}
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
+```
+## Poster
+```{r}
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
+```
+## Awards
+```{r}
+awards <- read_excel("../data/awards.xlsx")
+awards<- awards[-c(1:2),] # remove descriptive title
+awards %>% arrange(desc(when))  %>% brief_entries(
+              what = with ,# middle
+              when = when  # left
+    ) # right
+```
 
 # Referees
 ```{r}
@@ -240,16 +220,52 @@ ref %>% detailed_entries(what = what, #subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
 ```
+\newpage
+# Publications
+```{r fig.height=2, fig.width=6}
+p1<- ggplot(ct, aes(year, cites)) +
+    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
+  ylab('Citations') +
+  labs(caption = "Citations per year. Source: Google Scholar") +
+   annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
+     annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
+  scale_x_continuous(breaks = c(2010:2022)) +
+  geom_point(size=3, color= col) +
+  theme_cowplot(font_size = 10) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+         plot.caption = element_text(face = "italic"))
+
+# p1
+papers <- read_excel("../data/Publication details.xlsx")
+
+mytheme <- gridExtra::ttheme_default(
+    core = list(fg_params=list(cex = 0.5)),
+    colhead = list(fg_params=list(cex = 0.6)),
+    rowhead = list(fg_params=list(cex = 0.6)))
+
+p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
+
+
+grid.arrange(p1, p2,
+             nrow=1,
+             as.table=TRUE)
+```
+
+```{r}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
+
+bibliography_entries("My collection.bib") %>%
+  arrange(desc(issued))
+
+```
 
 \newpage
 
 # Appendix
-## Shortlisted applications
-*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
-* Shortlisted as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
-* Shortlisted for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
 
-## Miscillenious contributions 
+## Discipline contributions 
 ```{r}
 rev <- read_excel("../data/reviewing.xlsx")
 rev<- rev[-c(1:2),] # remove descriptive title
@@ -318,46 +334,18 @@ classes %>%
     why = detail#, .protect = F
   )
 ```
+## Shortlisted applications
+*	Shortlisted for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
+* Shortlisted as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
+* Shortlisted for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
 
-## Citation metrics
-<!-- Total citations: `r l$total_cites`, h index: `r l$h_index`  -->
+## Manuscipts in preparation
 
-```{r fig.height=2, fig.width=6}
-p1<- ggplot(ct, aes(year, cites)) +
-    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
-  ylab('Citations') +
-  labs(caption = "Citations per year. Source: Google Scholar") +
-   annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
-     annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
-  scale_x_continuous(breaks = c(2010:2022)) +
-  geom_point(size=3, color= col) +
-  theme_cowplot(font_size = 10) +
-  theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(angle = 45, hjust = 1),
-         plot.caption = element_text(face = "italic"))
+Dwivedi, A., Ui Mhaonaigh, A.,  Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients
 
-# p1
-papers <- read_excel("../data/Publication details.xlsx")
+Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. The proteome of the pleural fluid 
 
-mytheme <- gridExtra::ttheme_default(
-    core = list(fg_params=list(cex = 0.5)),
-    colhead = list(fg_params=list(cex = 0.6)),
-    rowhead = list(fg_params=list(cex = 0.6)))
-
-p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
-
-
-grid.arrange(p1, p2,
-             nrow=1,
-             as.table=TRUE)
-```
-```{r}
-
-
-
-
-
-```
+O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M.,  Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
 
 
 ```{r eval=FALSE}
