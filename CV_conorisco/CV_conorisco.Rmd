@@ -19,7 +19,7 @@ output: vitae::awesomecv
 aboutme: "Immunologist with mutidiciplary skills in cellular, molecular, bioinformatics and clinical research"
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
-#fontsize: 8pt
+fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
 headcolor: 224190
 ---
 
@@ -128,16 +128,17 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 # Funding (under review)
 
-1.  **The Lister Institute of Preventive Medicine Prize 2023**, £250,000. Under international review (Shortlisted for 2nd stage). Expected outcome May 2023.
+1.  **The Lister Institute of Preventive Medicine Prize 2023**, £250,000. Under international review
     -   *Title withheld*.
+    -   Short-listed for 2nd stage, Expected outcome May 2023.
 
-```{=html}
 <!-- -->
-```
-2.  **SFI Pathways program 2022**, €425,000. Under international review (Shortlisted for 2nd stage), expected outcome April 2023.
-    -   *Macrophage Activation and Transition in the Autoimmune Kidney (MacATAK): uncovering functional outcomes of macrophage differentiation in the inflamed kidney*.
 
-\newpage
+2.  **SFI Pathways program 2022**, €425,000.
+    <!-- -   *Macrophage Activation and Transition in the Autoimmune Kidney (MacATAK): uncovering functional outcomes of macrophage differentiation in the inflamed kidney*. -->
+    -   *Title withheld*.
+    -   Short-listed for 2nd stage, expected outcome April 2023.
+
 
 # Presentations & awards
 
@@ -151,7 +152,7 @@ pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brie
               when = when,
               with = where)
 ```
-
+\newpage
 ## Poster
 
 ```{r}
@@ -325,11 +326,11 @@ I have a broad skillet that includes animal research, translational research, mo
 
 **Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (20+) flow cytometry, mass cytometry (including panel design), tissue digestion, ELISA, lab management, inventory, ordering, health and saftey.
+**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, lab management, inventory, ordering, health and safety.
 
-**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quanitiative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
+**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
 
-**Clinical research and research data handling**: Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap). Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
+**Clinical research and research data handling**: Ability to mange and interact with multi-disciplinary teams of clinicians and scientist. Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
 
 ## Discipline and College contributions
 
