@@ -61,9 +61,9 @@ ct <- get_citation_history(myscol)
 
 I am an energetic ambitious immunologist with a clear goal to build an independent research platform. My research interests include type 2 immune responses, autoimmunity and the implantation of computational approaches to analysis of immune cells and disease outcomes.
 
-My most recent work is currently under revision in the current top ranked Immunology journal. The ideas I generated from this work forms the basis of 2 major grant applications under review where I aim to identify the factors that control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes.
+The ideas I generated from my recent work in *Immunity* forms the basis of 2 major grant applications under review where I aim to identify the factors that control mononuclear phagocyte (macrophage) differentiation during inflammation and how this impacts on disease outcomes.
 
-I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries in Immunology. I have a passion for enhancing research capacity through implementation of formalised structures to address the challenge of both generating 'omics' technology data and integrating this data with clincal databases.
+I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries in Immunology. I have a passion for enhancing research capacity through implementation of formalised structures to address the challenge of both generating 'omics' technology data and integrating this data with clinical databases.
 
 # Current Roles
 
@@ -184,7 +184,7 @@ p1<- ggplot(ct, aes(year, cites)) +
   labs(caption = "Citations per year. Source: Google Scholar") +
    annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
      annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
-  scale_x_continuous(breaks = c(2010:2022)) +
+  scale_x_continuous(breaks = c(2010:2023)) +
   geom_point(size=3, color= col) +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank(),
@@ -294,8 +294,8 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
-**TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this service to include external industry clients.
 
+ **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this service to include external industry clients. 
 <!-- \newpage -->
 
 # Referees
