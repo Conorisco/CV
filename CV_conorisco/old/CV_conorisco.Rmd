@@ -2,7 +2,7 @@
 name: Conor M.
 surname: Finlay
 position: "Senior Research Fellow"
-address: "Trinity Translational Medicine Institute, Trinity College Dublin"
+address: "Trinity Translational Medicines Insitute, Trinity College Dublin"
 phone: +353 857148825
 profilepic: Conor.jpeg
 #www: "github.com/Conorisco"
@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician combinding molecular, in vivo and translational research"
+aboutme: "Immunologist with mutidiciplary skills in cellular, molecular, bioinformatics and clinical research"
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -57,25 +57,29 @@ ct <- get_citation_history(myscol)
 
 <!-- Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming. -->
 
-# Vison
+# Snapshot
 
-I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries. 
+My research aims to redefine our understanding of macrophages in inflammation. My research is holistic and operates at the level of the gene, the cell, tissue and the organism. I have a particular interest in type 2 immune responses, lung immunology, autoimmunity and incorporates cellular, clinical and bioinformatic techniques.
 
-My research aims to redefine our understanding of macrophages in inflammation. My holistic reserach view operates at the level of the gene, cell, tissue and organism. I have a particular interest in type 2 immune responses, single cell omics, lung & kidney immunology and autoimmunity. The concepts I uncovered in my recent publication in *Immunity* form the basis of my current grant applications where I will identify factors that control macrophage differentiation and function in inflammation.
+The concepts I uncovered in my recent publication in *Immunity* forms the basis of my current grant applications and aims to identify the factors that control macrophage differentiation during inflammation and how this impacts on disease outcomes.
+
+I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries in Immunology. I have a passion for enhancing research capacity through implementation of formalised structures to address the challenge of both generating and making sense of 'omics' data
 
 # Current Roles
 
 ## Senior Research Fellow, Trinity College Dublin
 
--   I set up "TCD Omics" - single cell RNA-sequencing core service (independent project)
 -   Myeloid cell dysfunction in COVID-19 (COVID-19 SFI-funded strategic partnership)
+-   Core facility development in single cell RNA-sequencing ("TCD Omics", independent project)
 -   lab management and biomarker research (Trinity Kidney Health Centre with Mark Little).
 -   Data integration of multi-modal clinical data, supervising development of R package (with Mark Little)
 -   Longitudinal clinical study design (high parameter (30+) flow cytometry panels) - T cell exhaustion as a predictor of autoimmune relapse (PARADISE, with Mark Little)
+-   Numerous active collaborations and bioinformatics support (see below)
 
 ## Honorary Research Fellow, University of Manchester
 
--   Active collaboration on *MRC* programme grant with Prof. Judith Allen (approx 25% FTE). 
+-   Collaboration on *MRC* programme grant with Prof. Judith Allen.
+-   Ongoing collaborations with Doug Dyer and Mark Travis groups
 
 # Employment History
 
@@ -119,14 +123,15 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-## Funding Under Review
+# Funding (under review)
 
 <!-- -->
 
   **SFI Pathways program 2022**, €425,000.
     <!-- -   *Macrophage Activation and Transition in the Autoimmune Kidney (MacATAK): uncovering functional outcomes of macrophage differentiation in the inflamed kidney*. -->
     -   *Title withheld*.
-    -   Short-listed for 2nd stage, expected outcome Q2 2023.
+    -   Short-listed for 2nd stage, expected outcome April 2023.
+
 
 # Presentations & awards
 
@@ -144,14 +149,13 @@ pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brie
 
 ## Poster
 
-8x International conference poster presentations (details available upon request)
 ```{r}
-# pres <- read_excel("../data/presentations.xlsx")
-# pres<- pres[-c(1:2),] # remove descriptive title
-# pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
-#               what = with,# middle
-#               when = when,
-#               with = where)
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
 ```
 
 ## Awards
@@ -167,18 +171,7 @@ awards %>% arrange(desc(when))  %>% brief_entries(
 
 # Publications
 
-```{r}
-library(dplyr)
-#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
-
-bibliography_entries("My collection.bib") %>%
-  arrange(desc(issued))
-
-```
-
-Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients **Under Review**
-
-```{r fig.height=1.75, fig.width=6}
+```{r fig.height=2, fig.width=6}
 p1<- ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
@@ -208,38 +201,34 @@ grid.arrange(p1, p2,
              as.table=TRUE)
 ```
 
+```{r}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
+
+bibliography_entries("My collection.bib") %>%
+  arrange(desc(issued))
+
+```
+
 # Collaborations (active)
 
 ```{r}
-#short version
   sup <- read_excel("../data/collaborations.xlsx")
 sup<- sup[-c(1:2),] # remove descriptive title
-sup  %>% arrange(desc(when)) %>% detailed_entries(
-  #what = what, #subtitle
-                         #when = when, # to right
-                         what = why , # sub-subtitle
+sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
                          with = with, # Major title
                          where =  where) #Rightmost)
 
 ```
+
 <!-- \newpage -->
-
-```{r}
-# #long versions  
-# sup <- read_excel("../data/collaborations.xlsx")
-# sup<- sup[-c(1:2),] # remove descriptive title
-# sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
-#                          when = when, # to right
-#                          why = why , # sub-subtitle
-#                          with = with, # Major title
-#                          where =  where) #Rightmost)
-
-```
-
 
 # Teaching & Supervision
 
-<!-- ## Formal teaching -->
+## Formal teaching
+
 ```{r}
 #teaching short version 
 # t <- read_excel("../data/teaching.xlsx")
@@ -275,34 +264,19 @@ t %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 ```
 
 ## Young scientist supervision
-```{r}
-# for longer version of CV
-# sup <- read_excel("../data/supervison.xlsx")
-# sup<- sup[-c(1:2),] # remove descriptive title
-# sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
-#                          when = when, # to right
-#                          why = why , # sub-subtitle
-#                          with = with, # Major title
-#                          where =  where) #Rightmost)
-```
 
 ```{r}
 sup <- read_excel("../data/supervison.xlsx")
 sup<- sup[-c(1:2),] # remove descriptive title
-sup$where <- sup$where %>% as.factor() %>% fct_recode("TCD"="Trinity College Dublin",
-                                                                        "UoM" = "University of Manchester")
+sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                         why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
 
-sup  %>% arrange(desc(when))  %>% brief_entries(
-              what = what,# middle
-              when = when, # left
-              with = where # right
-                # left
-    ) # right
 ```
 
-**Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits for school students at various points between 2013-2016. I have developed a 12 hour course in basic data visualisation skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/).
-
-I acted as official 'external mentor' of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. I sit on the thesis committee of 3 Trinity PhD students in School of Medicine and Statistics. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class.
+**Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits for school students at various points between 2013-2016. I have developed a 12 hour course in basic data science skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/). I acted as official 'external mentor' of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class.
 
 # Outreach and organisation
 
@@ -314,7 +288,8 @@ I acted as official 'external mentor' of a PhD student in Wellcome Trust in Immu
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
- **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this service to include external industry clients.
+
+ **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this service to include external industry clients. 
 <!-- \newpage -->
 
 # Referees
@@ -329,46 +304,27 @@ ref %>% detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 ```
 
-# Appendix
-
-[A longform CV with an appendix to this is availableherearranged into: **Media  & commentary**, **Short-listed applications**,**Discipline and College Contributions**, **Training**,**Courses** **Societies and Committees**, and **Skills**.](https://github.com/Conorisco/CV) 
-
-
 <!-- \newpage -->
 
 \newpage
 
 # Appendix
 
-## Manuscripts in preparation, in review, etc (exclding pre-prints)
+## Skills
 
-* Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ CD117+ FcεR1lo cells in peripheral blood are elevated in patients with chronic spontaneous urticaria and display phenotypes which correlate with treatment response
+I have a broad skillet that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that make me uniquely well suited to the design and management of research projects from a multi disciplinary point of view.
 
-* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients (Under review)
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 6 years), Python (Intermediate, 4 years), RMarkdown (Intermediate, 4 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
 
-* Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. The proteome of the pleural fluid
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (5 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
 
-* O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M., Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
+**Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-## Media and commentary
+**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, lab management, inventory, ordering, health and safety.
 
-* Li, X., and Jakubzick, C. V. (2023). Macrophages show up in style when Th2 lymphocytes organize their homecoming. Immunity 56, 900–902. 10.1016/j.immuni.2023.04.007.
+**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
 
-* Paper featured on The Immunology Podcast - Episode 51 [https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green]((link))
-
-* [https://www.tcd.ie/news_events/articles/2023/researchers-tackle-parasitic-worms-that-infect-millions-worldwide/]()
-
-* Trinity College and University of Manchester tackle parasitic worms that infect millions, Irish Medical Times, Vol 74 No.4, April 2023
-
-## Short-listed applications
-
--   Short-listed for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
-
--   Short-listed for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
-
--   Short-listed as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
-
--   Short-listed for Lister Prize 2023
+**Clinical research and research data handling**: Ability to mange and interact with multi-disciplinary teams of clinicians and scientist. Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
 
 ## Discipline and College contributions
 
@@ -381,6 +337,7 @@ rev  %>% arrange(desc(when)) %>% brief_entries(
               with = with
                 # left
     ) # right
+
 ```
 
 ## Training
@@ -392,25 +349,17 @@ train  %>% arrange(desc(Year)) %>% brief_entries(
               what = Course,# middle
               when = Year,# left
               with = Insitution# right
+                
     ) 
+
 ```
 
-## Thesis Committee 
-
-```{r}
-tc <- read_excel("../data/Thesis_committee.xlsx")
-tc<- tc[-c(1),] # remove descriptive title
-tc  %>% arrange(desc(when)) %>% brief_entries(
-              what = what,# middle
-              when = when,# left
-              with = with# right
-    ) 
-```
 ## Courses
 
 ```{r}
 
 cor <- read_excel("../data/courses.xlsx")
+
 
 TCD <- cor$`Trinity College Dublin`
 Manchester <- cor$`University of Manchester`
@@ -450,22 +399,36 @@ classes %>%
   )
 ```
 
-## Skills
+## Short-listed applications
 
-I have a broad skillet that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that make me uniquely well suited to the design and management of research projects from a multidisciplinary point of view.
+-   Short-listed for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 6 years), Python (Intermediate, 4 years), RMarkdown (Intermediate, 4 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
+-   Short-listed as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
 
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (5 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
+-   Short-listed for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
 
-**Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
+-   Short-listed for Lister Prize 2023
 
-**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, lab management, inventory, ordering, health and safety.
+## Media and commentry
 
-**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
 
-**Clinical research and research data handling**: Ability to mange and interact with multidisciplinary teams of clinicians and scientist. Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
+* Li, X., and Jakubzick, C. V. (2023). Macrophages show up in style when Th2 lymphocytes organize their homecoming. Immunity 56, 900–902. 10.1016/j.immuni.2023.04.007.
 
+* Paper featured on The Immunology Podcast - Episode 51 [https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green]((link))
+
+* [https://www.tcd.ie/news_events/articles/2023/researchers-tackle-parasitic-worms-that-infect-millions-worldwide/]()
+
+* Trinity College and University of Manchester tackle parasitic worms that infect millions, Irish Medical Times, Vol 74 No.4, April 2023
+
+
+
+## Manuscripts in preparation, in review (without pre-prints)
+
+Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients (Under review)
+
+Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. The proteome of the pleural fluid
+
+O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M., Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
 
 ```{r eval=FALSE}
 tribble(
