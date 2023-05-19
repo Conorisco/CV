@@ -128,9 +128,9 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
     -   *Title withheld*.
     -   Short-listed for 2nd stage, expected outcome Q2 2023.
 
-# Presentations & awards
+# Presentations, Awards & contributions
 
-## Oral
+## Oral Presentations (details of 8X poster presentations availible in appendex)
 
 ```{r}
 pres <- read_excel("../data/presentations.xlsx")
@@ -139,19 +139,6 @@ pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brie
               what = with,# middle
               when = when,
               with = where)
-```
-
-
-## Poster
-
-8x International conference poster presentations (details available upon request)
-```{r}
-# pres <- read_excel("../data/presentations.xlsx")
-# pres<- pres[-c(1:2),] # remove descriptive title
-# pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
-#               what = with,# middle
-#               when = when,
-#               with = where)
 ```
 
 ## Awards
@@ -165,6 +152,19 @@ awards %>% arrange(desc(when))  %>% brief_entries(
     ) # right
 ```
 
+## Discipline Contributions
+```{r}
+rev <- read_excel("../data/reviewing.xlsx")
+rev<- rev[-c(1:2),] # remove descriptive title
+rev  %>% arrange(desc(when)) %>% brief_entries(
+              what = what,# middle
+              when = when,
+              with = with
+                # left
+    ) # right
+```
+
+
 # Publications
 
 ```{r}
@@ -176,37 +176,11 @@ bibliography_entries("My collection.bib") %>%
 
 ```
 
-Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients **Under Review**
+* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 **Under Review**
 
-```{r fig.height=1.75, fig.width=6}
-p1<- ggplot(ct, aes(year, cites)) +
-    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
-  ylab('Citations') +
-  labs(caption = "Citations per year. Source: Google Scholar") +
-   annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
-     annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
-  scale_x_continuous(breaks = c(2010:2023)) +
-  geom_point(size=3, color= col) +
-  theme_cowplot(font_size = 10) +
-  theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(angle = 45, hjust = 1),
-         plot.caption = element_text(face = "italic"))
+* [Commentry on my work in Immunity: Macrophages show up in style when Th2 lymphocytes organize their homecoming.](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
 
-# p1
-papers <- read_excel("../data/Publication details.xlsx")
-
-mytheme <- gridExtra::ttheme_default(
-    core = list(fg_params=list(cex = 0.5)),
-    colhead = list(fg_params=list(cex = 0.6)),
-    rowhead = list(fg_params=list(cex = 0.6)))
-
-p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
-
-
-grid.arrange(p1, p2,
-             nrow=1,
-             as.table=TRUE)
-```
+*  [Paper featured on The Immunology Podcast](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
 
 # Collaborations (active)
 
@@ -331,7 +305,7 @@ ref %>% detailed_entries(what = what, #subtitle
 
 # Appendix
 
-[A longform CV with an appendix to this is availableherearranged into: **Media  & commentary**, **Short-listed applications**,**Discipline and College Contributions**, **Training**,**Courses** **Societies and Committees**, and **Skills**.](https://github.com/Conorisco/CV) 
+[Appendix on Github: **Media  & commentary**, **Manuscripts in preparation**, **Short-listed Applications**,**Poster Presentations**, **Thesis Committees and Vivas**, **Interview panels**, **Training**,**Courses** **Societies and Committees**, and **Skills**.](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco.pdf) 
 
 
 <!-- \newpage -->
@@ -340,7 +314,39 @@ ref %>% detailed_entries(what = what, #subtitle
 
 # Appendix
 
-## Manuscripts in preparation, in review, etc (exclding pre-prints)
+## Citations
+
+```{r fig.height=1.75, fig.width=6}
+p1<- ggplot(ct, aes(year, cites)) +
+    geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
+  ylab('Citations') +
+  labs(caption = "Citations per year. Source: Google Scholar") +
+   annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
+     annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
+  scale_x_continuous(breaks = c(2010:2023)) +
+  geom_point(size=3, color= col) +
+  theme_cowplot(font_size = 10) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+         plot.caption = element_text(face = "italic"))
+
+# p1
+papers <- read_excel("../data/Publication details.xlsx")
+
+mytheme <- gridExtra::ttheme_default(
+    core = list(fg_params=list(cex = 0.5)),
+    colhead = list(fg_params=list(cex = 0.6)),
+    rowhead = list(fg_params=list(cex = 0.6)))
+
+p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
+
+
+grid.arrange(p1, p2,
+             nrow=1,
+             as.table=TRUE)
+```
+
+## Manuscripts in Preparation or review, etc (exclding pre-prints)
 
 * Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ CD117+ FcεR1lo cells in peripheral blood are elevated in patients with chronic spontaneous urticaria and display phenotypes which correlate with treatment response
 
@@ -350,17 +356,17 @@ ref %>% detailed_entries(what = what, #subtitle
 
 * O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M., Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
 
-## Media and commentary
+## Media and Commentary
 
-* Li, X., and Jakubzick, C. V. (2023). Macrophages show up in style when Th2 lymphocytes organize their homecoming. Immunity 56, 900–902. 10.1016/j.immuni.2023.04.007.
+* [Li, X., and Jakubzick, C. V. (2023). Macrophages show up in style when Th2 lymphocytes organize their homecoming. Immunity 56, 900–902. 10.1016/j.immuni.2023.04.007.](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
 
-* Paper featured on The Immunology Podcast - Episode 51 [https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green]((link))
+*  [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
 
 * [https://www.tcd.ie/news_events/articles/2023/researchers-tackle-parasitic-worms-that-infect-millions-worldwide/]()
 
 * Trinity College and University of Manchester tackle parasitic worms that infect millions, Irish Medical Times, Vol 74 No.4, April 2023
 
-## Short-listed applications
+## Short-listed Applications
 
 -   Short-listed for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
 
@@ -370,17 +376,15 @@ ref %>% detailed_entries(what = what, #subtitle
 
 -   Short-listed for Lister Prize 2023
 
-## Discipline and College contributions
+## Poster Presentations
 
 ```{r}
-rev <- read_excel("../data/reviewing.xlsx")
-rev<- rev[-c(1:2),] # remove descriptive title
-rev  %>% arrange(desc(when)) %>% brief_entries(
-              what = what,# middle
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brief_entries(
+              what = with,# middle
               when = when,
-              with = with
-                # left
-    ) # right
+              with = where)
 ```
 
 ## Training
@@ -395,7 +399,7 @@ train  %>% arrange(desc(Year)) %>% brief_entries(
     ) 
 ```
 
-## Thesis Committee 
+## Thesis Committees and Continuation Vivas
 
 ```{r}
 tc <- read_excel("../data/Thesis_committee.xlsx")
@@ -406,6 +410,18 @@ tc  %>% arrange(desc(when)) %>% brief_entries(
               with = with# right
     ) 
 ```
+## Interview Panels
+```{r}
+rev <- read_excel("../data/Interview panels.xlsx")
+rev<- rev[-c(1:2),] # remove descriptive title
+rev  %>% arrange(desc(when)) %>% brief_entries(
+              what = what,# middle
+              when = when,
+              with = with
+                # left
+    ) # right
+```
+
 ## Courses
 
 ```{r}
@@ -428,7 +444,7 @@ classes %>%
   )
 ```
 
-## Societies and committees
+## Societies and Committees
 
 ```{r}
 
@@ -450,7 +466,7 @@ classes %>%
   )
 ```
 
-## Skills
+## Skills Annex
 
 I have a broad skillet that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that make me uniquely well suited to the design and management of research projects from a multidisciplinary point of view.
 
