@@ -288,7 +288,8 @@ I acted as official 'external mentor' of a PhD student in Wellcome Trust in Immu
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
- **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of not having a working single cell RNA-sequencing in TCD. The service was soft launched internally in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. I am to expand this to a full service and hire talent to expand the capability of this service to include external industry clients.
+ **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of the lack of single cell RNA-sequencing capacity in TCD. The service was launched in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. This has now received internal support for a 0.5 % FTE research assistant and we have offered services to 5 academic and 1 industry partners.
+ 
 <!-- \newpage -->
 
 # Referees
@@ -360,7 +361,7 @@ grid.arrange(p1, p2,
 
 * [Li, X., and Jakubzick, C. V. (2023). Macrophages show up in style when Th2 lymphocytes organize their homecoming. Immunity 56, 900–902. 10.1016/j.immuni.2023.04.007.](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
 
-*  [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
+*  [Immunity paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
 
 * [https://www.tcd.ie/news_events/articles/2023/researchers-tackle-parasitic-worms-that-infect-millions-worldwide/]()
 
@@ -370,7 +371,7 @@ grid.arrange(p1, p2,
 
 -   Short-listed for UKRI Innovation/Rutherford Fund Skills Development Fellowship (Computational Biology), 2017.
 
--   Short-listed for academic-industry partnership with Janssen Pharmaceuticals, Belgium, 2019
+-   Short-listed for academic-industry partnership post-doctoral position, Belgium, 2019
 
 -   Short-listed as candidate from school of medicine for Science Foundation Ireland Pathways programme, 2021
 
