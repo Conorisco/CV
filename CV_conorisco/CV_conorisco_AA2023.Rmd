@@ -128,15 +128,19 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 # Presentations, Awards & contributions
 
+* 16 Oral conference presentations ( including 3 invited presentations)
+* 8 Poster conference presentations 
+* [Awards list available in appendix online](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
+
 ## Oral Presentations (details of 8X poster presentations availible in appendex)
 
 ```{r}
-pres <- read_excel("../data/presentations.xlsx")
-pres<- pres[-c(1:2),] # remove descriptive title
-pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-              what = with,# middle
-              when = when,
-              with = where)
+# pres <- read_excel("../data/presentations.xlsx")
+# pres<- pres[-c(1:2),] # remove descriptive title
+# pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+#               what = with,# middle
+#               when = when,
+#               with = where)
 ```
 
 ## Awards
