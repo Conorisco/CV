@@ -73,7 +73,6 @@ ct <- get_citation_history(myscol)
 -   Collaboration on my *MRC* programme grant with Prof. Judith Allen (approx 20% FTE). 
 
 # Employment History
-
 ```{r}
 emp <- read_excel("../data/employment.xlsx") 
 emp <- emp[-c(1:2),] # remove descriptive title
@@ -85,7 +84,6 @@ emp %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
 ```
 
 # Education
-
 ```{r}
 edu <- read_excel("../data/education.xlsx") 
 edu <- edu[-c(1:2),] # remove descriptive title
@@ -99,7 +97,6 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
 ```
 
 # Referees
-
 ```{r}
 ref <- read_excel("../data/referees.xlsx")
 ref<- ref[-c(1:2),] # remove descriptive title
@@ -192,7 +189,6 @@ rev  %>% arrange(desc(when)) %>% brief_entries(
 ```
 
 # Active Collaborations
-
 ```{r}
 #short version
   sup <- read_excel("../data/collaborations.xlsx")
@@ -306,7 +302,6 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 [Please see my gitub for a long form CV with exhaustive list of presentations, awards, datasets, training and skills, etc.](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
 
 # Publications
-
 ```{r}
 library(dplyr)
 #knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
