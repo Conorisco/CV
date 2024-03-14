@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician combining molecular, in vivo and translational research. "
+aboutme: "Cellular Immunologist and bioinformatician combinding molecular, in vivo and translational research. I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries."
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -25,8 +25,6 @@ headcolor: 224190
 
 <!-- # Career profile -->
 <!-- I started my career in Trinity College Dublin identify pathways that shut down autoimmunity and allergy, leading to three papers in *The Journal of Immunology* and one in *Parasite immunology* and co-authorship in *Nature communications*. Next in Manchester I made a major advance on how adaptive immunity controls macrophages and how macrophage differentiation controls disease outcomes, publishing articles in *Immunity*, *elife*, *Nature Immunology* and *Parasite Immunology*. Recently, back in Ireland I have been conducting patient orientated research where I have submitted my first co-final author paper. I have received a best talk at the Irish Society of Immunology conference, been an invited speaker at 3 conferences and spoken at 13 more. I have received 8 awards. I have supervised 13 research students, reviewed articles, grants and will soon join *Frontiers in immunology* as a review editor. I am the member of 4 scientific societies, and sit on 3 committees. I am a co-inventor on a patent WM01-740-02 that has been commercialised as a biotech company Pravalix Tx.  -->
-
-<!-- I am ready to educate the next generation of scientists and clinicians and lead my own group to make transformative discoveries. -->
 
 <!-- #\fontsize{11}{18}{8}{8} -->
 ```{r install packages, include=FALSE}
@@ -57,24 +55,25 @@ p <- get_publications(myscol)
 ct <- get_citation_history(myscol)
 ```
 
-# Snapshot
-My main research interest is in what genetic factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise in single cell RNA-sequencing, NGS, cell biology, *in vitro* and *in vivo* sciences and summarising complex data through effective data visualisation.
+<!-- # Research interests  -->
+<!-- Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming. -->
 <!-- # SECTION 1 - applicant details -->
+
+
 
 # Current roles
 
 ##  Senior Research Fellow, Trinity College Dublin (2022-present)
 
--   HEALED consortium - molecular biology and sequencing lead (with Aideen Long), since August 2023
--   TCD Omics - Single cell RNA-sequencing platform technology (founder and lead), since 2021 
--   COVID-19 SFI-funded strategic partnership - transnational immunology ,up to mid-2023
--   Trinity Kidney Health Centre - lab management, student supervision and biomarker research (with Mark Little), up to mid-2023
--   Multi-modal clinical data analysis (with Mark Little), up to mid-2023
--   Co-supervising longitudinal immune cell phenotyping transnational study, PARADISE project, (with Mark Little), 2022-present
+-   Myeloid cell dysfunction in COVID-19 (COVID-19 SFI-funded strategic partnership)
+-   "TCD Omics" - single cell RNA-sequencing (independent project)
+-   lab management and biomarker research (Trinity Kidney Health Centre with Mark Little).
+-   Data integration of multi-modal clinical data, supervising development of R package (with Mark Little)
+-   Longitudinal clinical study design (high parameter (30+) flow cytometry panels) - T cell exhaustion as a predictor of autoimmune relapse (PARADISE, with Mark Little)
 
 ## Honorary Research Fellow, University of Manchester (2021-present)
 
--   Collaboration on *MRC* programme grant with Prof. Judith Allen. 
+-   Collaboration on my *MRC* programme grant with Prof. Judith Allen (approx 20% FTE). 
 
 # Employment History
 ```{r}
@@ -153,10 +152,6 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
 * [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
 
 * Immunity paper featured on August 2023 edition of *Journal of Allergy and Clinical Immunology* News Beyond Our Pages column.
-
-#https://www.irishhealthpro.com/content/articles/show/name/irish-led-research-tackles-parasitic-worms-that-infect-millions
-#https://medicalxpress.com/news/2023-03-tackle-parasitic-worms-infect-millions.html
-
 
 ## Awards
 
@@ -310,7 +305,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
  **TCD Omics Core facility**.I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
  
-**Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project. I have pitched an idea to the St James hospital Patient Representative Group and received feedback on development of a research programme, lay abstract and patient information leaflet.
+**Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project.
  
 <!-- \newpage -->
 
@@ -325,11 +320,9 @@ bibliography_entries("My collection.bib") %>%
 
 ```
 
-## Publications in review (as co-final author)
+## Publications in review
 
-* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 
-
-* Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ FcεR1+ mast cell precursors are increased in chronic spontaneous urticaria and predict clinical response to anti-IgE therapy
+Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 **Under Review, I am co-last and co-corresponding author**
 
 # Referees
 ```{r}
@@ -347,6 +340,21 @@ ref %>% detailed_entries(what = what, #subtitle
 \newpage
 
 # Appendix
+
+## Datasets, code & websites 
+
+```{r}
+dat <- read_excel("../data/datasets.xlsx")
+dat<- dat[-c(1:2),] # remove descriptive title
+#pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+
+dat  %>% arrange(desc(when)) %>% detailed_entries(
+              with = with,# Major title
+              when = when, # to right
+              what = why, # sub-subtitle
+              where = where) #Rightmost)
+
+```
 
 ## Citation metrics
 
@@ -380,32 +388,15 @@ grid.arrange(p1, p2,
              as.table=TRUE)
 ```
 
+## Manuscripts in Preparation or review, etc (pre-prints listed as part of publications)
 
-## Datasets, code & websites 
+* Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ CD117+ FcεR1lo cells in peripheral blood are elevated in patients with chronic spontaneous urticaria and display phenotypes which correlate with treatment response
 
-```{r}
-dat <- read_excel("../data/datasets.xlsx")
-dat<- dat[-c(1:2),] # remove descriptive title
-#pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients (Under review)
 
-dat  %>% arrange(desc(when)) %>% detailed_entries(
-              with = with,# Major title
-              when = when, # to right
-              what = why, # sub-subtitle
-              where = where) #Rightmost)
+* Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. The proteome of the pleural fluid
 
-```
-
-
-<!-- ## Manuscripts in Preparation or review, etc (pre-prints listed as part of publications) -->
-
-<!-- * Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ FcεR1+ mast cell precursors are increased in chronic spontaneous urticaria and predict clinical response to anti-IgE therapy -->
-
-<!-- * Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. Characterisation of low density neutrophils in SARS-Cov 2 patients (Under review) -->
-
-<!-- * Finlay, C.M. Parkinson, J.P., Chan, B.H.K. and Allen, J.E. The proteome of the pleural fluid -->
-
-<!-- * O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M., Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis -->
+* O'Conluain, R., Hollingsworth, s., Little, M. and Finlay, C.M., Soluble urokinase plasminogen activator receptor is a biomarker of kidney disease in ANCA-associated vasculitis
 
 
 ## Short-listed Applications
@@ -500,21 +491,22 @@ classes %>%
 
 
 
-## Skills
+## Skills Annex
 
 I have a broad skillet that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that enable me to design and manage research projects from a multidisciplinary point of view.
 
-**Translational research and clinical data analysis**: Ability to mange and interact with multidisciplinary teams of clinicians, scientists, biobanking teams, biostatisticians and bioinformatians. Experience with biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
-
 **Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 6 years), Python (Intermediate, 4 years), RMarkdown (Intermediate, 4 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
 
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (6 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (5 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
 
 **Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparatoin, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
+**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, lab management, inventory, ordering, health and safety.
 
-**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), lab management, inventory, ordering, health and safety.
+**Molecular biology** NGS library preparation (Illumina) for single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000) study design for NGS experiments, RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
+
+**Clinical research and research data handling**: Ability to mange and interact with multidisciplinary teams of clinicians and scientist. Cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
+
 
 ```{r eval=FALSE}
 tribble(

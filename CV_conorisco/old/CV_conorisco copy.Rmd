@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician combinding molecular, in vivo and translational research. I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries."
+aboutme: "Cellular Immunologist and bioinformatician combinding molecular, in vivo and translational research"
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -24,6 +24,7 @@ headcolor: 224190
 ---
 
 <!-- #\fontsize{11}{18}{8}{8} -->
+
 ```{r install packages, include=FALSE}
 #install.packages("tidyverse")
 #install.packages("vitae")
@@ -53,26 +54,29 @@ ct <- get_citation_history(myscol)
 ```
 
 <!-- # Research interests  -->
+
 <!-- Cellular Immunologist with three core skills: *in vivo* **models of inflammation, bioinformatics and clinical research**. My main research interest is in what factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise T cell function, autoimmunity, type 2 immune responses, stromal-immune cell interactions, myeloid cells, data visualisation and programming. -->
-<!-- # SECTION 1 - applicant details -->
 
+I am ready to educate the next generation of doctors and scientists and lead my own group to make transformative discoveries. 
 
+My research aims to redefine our understanding of macrophages in inflammation. My holistic reserach view operates at the level of the gene, cell, tissue and organism. I have a particular interest in type 2 immune responses, single cell omics, lung & kidney immunology and autoimmunity. The concepts I uncovered in my recent publication in *Immunity* form the basis of my current grant applications where I will identify factors that control macrophage differentiation and function in inflammation.
 
-# 1. Applicant details
+# Current Roles 
 
-##  Senior Research Fellow, Trinity College Dublin (2022-present)
+##  Senior Research Fellow, Trinity College Dublin
 
+-   I set up "TCD Omics" - single cell RNA-sequencing core service (independent project)
 -   Myeloid cell dysfunction in COVID-19 (COVID-19 SFI-funded strategic partnership)
--   "TCD Omics" - single cell RNA-sequencing (independent project)
 -   lab management and biomarker research (Trinity Kidney Health Centre with Mark Little).
 -   Data integration of multi-modal clinical data, supervising development of R package (with Mark Little)
 -   Longitudinal clinical study design (high parameter (30+) flow cytometry panels) - T cell exhaustion as a predictor of autoimmune relapse (PARADISE, with Mark Little)
 
-## Honorary Research Fellow, University of Manchester (2021-present)
+## Honorary Research Fellow, University of Manchester
 
--   Collaboration on my *MRC* programme grant with Prof. Judith Allen (approx 20% FTE). 
+-   Active collaboration on *MRC* programme grant with Prof. Judith Allen (approx 25% FTE). 
 
-# Employment History
+## Employment History
+
 ```{r}
 emp <- read_excel("../data/employment.xlsx") 
 emp <- emp[-c(1:2),] # remove descriptive title
@@ -83,7 +87,8 @@ emp %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 ```
 
-# Education
+## Education
+
 ```{r}
 edu <- read_excel("../data/education.xlsx") 
 edu <- edu[-c(1:2),] # remove descriptive title
@@ -96,30 +101,10 @@ edu  %>% arrange(desc(when)) %>%  detailed_entries(what = what, #subtitle
 
 ```
 
-# Referees
-```{r}
-ref <- read_excel("../data/referees.xlsx")
-ref<- ref[-c(1:2),] # remove descriptive title
-ref %>% detailed_entries(what = what, #subtitle
-                         when = when, # to right
-                        # why = why , # sub-subtitle
-                         with = with, # Major title
-                         where =  where) #Rightmost)
-```
-
-# 2. Alignment with UCD Strategic Themes and SDGs
-I am committed to UCD’s Rising to the Future Strategy and the UN Sustainable development goals (SDG). **Theme 3 Building a Healthy World**: My past work on neglected tropical diseases has given me an affinity for the ‘One Health’ concept on the interconnectivity of living organisms: The discovery of health interventions requires a holistic approach that incorporates other species and the environment. My core research focuses on immune cells called macrophages maps across tissues, disease types and species. **Theme 2 Transforming though Digital Technology**: My research and teaching are a blend of the ‘wet lab’ and data analytics and incorporates the very cutting-edge technologies. **Theme 1 Creating a Sustainable Global Society**: I have implemented green lab policies, linking with SDG#12. I have met and fully support the Postgraduate Workers’ Organisation in their pursuit reduce barriers to science in Ireland. *Please see cover letter for more details.*
-
-## Equality, Diversity, and Inclusion (EDI)
-
-I am committed to UCD’s **Equality, Diversity, and Inclusion (EDI) strategy and Action plan**. have completed the Equality, Diversity and Inclusion in Higher Education training in TCD. Consideration for EDI has modified how I manage staff and conduct teaching. I am attuned to neurodiversity and have managed neurodiverse staff. My own neurodiversity has driven me to reconstruct my teaching material and assessment to make learning more accessible to a variety of student types. Such approaches approach aligns with UCD’s University for All strategy. *Please see cover letter for details*.
-
-# 3. Key Achievements in Research Excellence and Impact
-I started my career in Trinity College Dublin identify pathways that shut down autoimmunity and allergy, leading to three papers in *The Journal of Immunology* and one in *Parasite immunology* and co-authorship in *Nature communications*. Next in Manchester I made a major advance on how adaptive immunity controls macrophages and how macrophage differentiation controls disease outcomes, publishing articles in *Immunity*, *elife*, *Nature Immunology* and *Parasite Immunology*. Recently, back in Ireland I have been conducting patient orientated research where I have submitted my first co-final author paper. I have received a best talk at the Irish Society of Immunology conference, been an invited speaker at 3 conferences and spoken at 13 more. I have received 8 awards. I have supervised 13 research students, reviewed articles, grants and will soon join *Frontiers in immunology* as a review editor. I am the member of 4 scientific societies, and sit on 3 committees. I am a co-inventor on a patent WM01-740-02 that has been commercialised as a biotech company Pravalix Tx. 
+<!-- \newpage -->
 
 # Funding
 
-## Awarded
 ```{r}
 
 gra <- read_excel("../data/grants.xlsx")
@@ -133,6 +118,7 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 ```
 
 ## Funding, Under Review
+
 <!-- -->
 
   **SFI Pathways program 2022**, €425,000.
@@ -142,38 +128,26 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 # Presentations, Awards & contributions
 
-## Presentations
-
-* [3 invited speaker presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
-* [13 conference oral presentations, selected from abstract ](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
-* [8 conference poster presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf)  
-
-## Awards and media
-
-* [Commentry in *Immunity*: "Macrophages show up in style when Th2 lymphocytes organize their homecoming"](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
-
-* [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
-
-<!-- ## Oral Presentations (details of 8X poster presentations availible in appendex) -->
+## Oral Presentations (details of 8X poster presentations availible in appendex)
 
 ```{r}
-# pres <- read_excel("../data/presentations.xlsx")
-# pres<- pres[-c(1:2),] # remove descriptive title
-# pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-#               what = with,# middle
-#               when = when,
-#               with = where)
+pres <- read_excel("../data/presentations.xlsx")
+pres<- pres[-c(1:2),] # remove descriptive title
+pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
+              what = with,# middle
+              when = when,
+              with = where)
 ```
 
-<!-- ## Awards -->
+## Awards
 
 ```{r}
-# awards <- read_excel("../data/awards.xlsx")
-# awards<- awards[-c(1:2),] # remove descriptive title
-# awards %>% arrange(desc(when))  %>% brief_entries(
-#               what = with ,# middle
-#               when = when  # left
-#     ) # right
+awards <- read_excel("../data/awards.xlsx")
+awards<- awards[-c(1:2),] # remove descriptive title
+awards %>% arrange(desc(when))  %>% brief_entries(
+              what = with ,# middle
+              when = when  # left
+    ) # right
 ```
 
 ## Discipline Contributions
@@ -188,7 +162,26 @@ rev  %>% arrange(desc(when)) %>% brief_entries(
     ) # right
 ```
 
-# Active Collaborations
+
+# Publications
+
+```{r}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
+
+bibliography_entries("My collection.bib") %>%
+  arrange(desc(issued))
+
+```
+
+* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 **Under Review, I am corresponding author**
+
+* [Commentry on my work in Immunity: Macrophages show up in style when Th2 lymphocytes organize their homecoming.](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
+
+*  [Paper featured on The Immunology Podcast](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
+
+# Collaborations (active)
+
 ```{r}
 #short version
   sup <- read_excel("../data/collaborations.xlsx")
@@ -218,7 +211,7 @@ sup  %>% arrange(desc(when)) %>% detailed_entries(
 
 # Teaching & Supervision
 
-## Formal teaching
+<!-- ## Formal teaching -->
 ```{r}
 #teaching short version 
 # t <- read_excel("../data/teaching.xlsx")
@@ -253,7 +246,7 @@ t %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-## Research Project Supervision
+## Young scientist supervision
 ```{r}
 # for longer version of CV
 # sup <- read_excel("../data/supervison.xlsx")
@@ -279,11 +272,13 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
     ) # right
 ```
 
-**Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties. I have organised visits for school students between 2013-2016. I sit on thesis committees for 3 PhD students.
+**Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties (including backboard). I have organised visits for school students at various points between 2013-2016. I have developed a 12 hour course in basic data visualisation skills for immunologists [basic data science skills for immunologist (click here)](https://conorisco.github.io/dataviz_immunology_r/).
 
-# Outreach, organisation, and PPI
+I acted as official 'external mentor' of a PhD student in Wellcome Trust in Immunomatrix in Complex Disease PhD program in Manchester. I sit on the thesis committee of 3 Trinity PhD students in School of Medicine and Statistics. My teaching philosophy is Think-Pair-Share - a method to keep students engaged by creating a mini student led discussions in class.
 
-**Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, organising a team of 50 researchers in leading themed tours of scientific facilities. We were the most subscribed event of Dublin Research Night (\>500 members of the public).
+# Outreach and organisation
+
+**Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, organising a team of 50 researchers in leading themed tours of scientific facilities. We were the most subscribed event of Dublin Research Night (\>500 members of the public) 8 weeks' full-time.
 
 **10th International Symposium on Bordetella**, Sep 2013. Logistics manager responsible for operations of the conference including registration, AV equipment and support for speakers.
 
@@ -291,53 +286,34 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
- **TCD Omics Core facility**.I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
- 
-**Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project.
+ **TCD Omics Core facility**. I formed a working group in 2021 to address the competitive disadvantage of the lack of single cell RNA-sequencing capacity in TCD. The service was launched in 2022 on a cost-for-service basis and delivers a full pipeline from consultation, cellular isolation, library preparation, sequencing, bioinformatics and basic downstream analysis. This has now received internal support for a 0.5 % FTE research assistant and we have offered services to 5 academic and 1 industry partners.
  
 <!-- \newpage -->
 
-# Online Appendix
+# Referees
 
-[Please see my gitub for a long form CV with exhaustive list of presentations, awards, datasets, training and skills, etc.](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
-
-# Publications
 ```{r}
-library(dplyr)
-#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
-
-bibliography_entries("My collection.bib") %>%
-  arrange(desc(issued))
-
+ref <- read_excel("../data/referees.xlsx")
+ref<- ref[-c(1:2),] # remove descriptive title
+ref %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                        # why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
 ```
 
-## Publications in review
+# Appendix
 
-Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 **Under Review, I am co-last and co-corresponding author**
+[Appendix on Github: **Media  & commentary**, **Manuscripts in preparation**, **Short-listed Applications**,**Poster Presentations**, **Thesis Committees and Vivas**, **Interview panels**, **Training**,**Courses** **Societies and Committees**, and **Skills**.](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco.pdf) 
 
 
 <!-- \newpage -->
 
 \newpage
 
-# Online Appendix
+# Appendix
 
-## Datasets, code & websites 
-
-```{r}
-dat <- read_excel("../data/datasets.xlsx")
-dat<- dat[-c(1:2),] # remove descriptive title
-#pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-
-dat  %>% arrange(desc(when)) %>% detailed_entries(
-              with = with,# Major title
-              when = when, # to right
-              what = why, # sub-subtitle
-              where = where) #Rightmost)
-
-```
-
-## Citation metrics
+## Citations
 
 ```{r fig.height=2, fig.width=6}
 p1<- ggplot(ct, aes(year, cites)) +
@@ -399,19 +375,6 @@ grid.arrange(p1, p2,
 
 -   Short-listed for Lister Prize 2023
 
-\newpage
-
-## Oral Presentations
-
-```{r}
-pres <- read_excel("../data/presentations.xlsx")
-pres<- pres[-c(1:2),] # remove descriptive title
-pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-              what = with,# middle
-              when = when,
-              with = where)
-```
-
 ## Poster Presentations
 
 ```{r}
@@ -422,18 +385,6 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
               when = when,
               with = where)
 ```
-
-## Awards
-
-```{r}
-awards <- read_excel("../data/awards.xlsx")
-awards<- awards[-c(1:2),] # remove descriptive title
-awards %>% arrange(desc(when))  %>% brief_entries(
-              what = with ,# middle
-              when = when  # left
-    ) # right
-```
-
 
 ## Training
 
@@ -492,7 +443,6 @@ classes %>%
   )
 ```
 
-
 ## Societies and Committees
 
 ```{r}
@@ -514,8 +464,6 @@ classes %>%
     why = detail#, .protect = F
   )
 ```
-
-
 
 ## Skills Annex
 
