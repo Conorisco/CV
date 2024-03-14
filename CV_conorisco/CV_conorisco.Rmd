@@ -324,8 +324,6 @@ bibliography_entries("My collection.bib") %>%
 
 * Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 
 
-* Ridge, R.,  Finlay, C.M., O’ Farrelly, C., Moran, B., Alvarado-Vazquez, A., Hallgren, J., Conlon. CD34+ FcεR1+ mast cell precursors are increased in chronic spontaneous urticaria and predict clinical response to anti-IgE therapy
-
 # Referees
 ```{r}
 ref <- read_excel("../data/referees.xlsx")
@@ -501,13 +499,13 @@ I have a broad skillet that includes animal research, translational research, mo
 
 **Translational research and clinical data analysis**: Ability to mange and interact with multidisciplinary teams of clinicians, scientists, biobanking teams, biostatisticians and bioinformatians. Experience with biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 6 years), Python (Intermediate, 4 years), RMarkdown (Intermediate, 4 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
+**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 7 years), Python (Intermediate, 5 years), RMarkdown (Intermediate, 5 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
 
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (6 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
+**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (7 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
 
 **Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparatoin, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
+**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparation, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
 
 **Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), lab management, inventory, ordering, health and safety.
 
