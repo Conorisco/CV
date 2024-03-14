@@ -1,29 +1,29 @@
 ---
 name: Conor M.
 surname: Finlay
-position: "Senior Research Fellow"
-address: "Trinity Translational Medicine Institute, Trinity College Dublin"
+position: Senior Research Fellow
+address: Trinity Translational Medicine Institute, Trinity College Dublin
 phone: +353 857148825
 profilepic: Conor.jpeg
-#www: "github.com/Conorisco"
-email: "cofinlay@tcd.ie; conor.finlay@manchester.ac.uk"
+email: cofinlay@tcd.ie; conor.finlay@manchester.ac.uk
 twitter: conorisco
 github: conorisco
 googlescholar: kQ6U7AkAAAAJ
-#headcolor:
 orcid: 0000-0001-8285-0903
-#linkedin: mariecurie
-date: "`r format(Sys.time(), '%B %Y')`"
-output: 
+date: March 2024
+output:
   vitae::awesomecv:
-    keep_md: true
+    keep_md: yes
     page_total: yes
-#output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician combining molecular, in vivo and translational research. "
-#docname: "Conor Finlay CV.pdf"
-#headcolor: 	050583
-fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
+aboutme: 'Cellular Immunologist and bioinformatician combining molecular, in vivo
+  and translational research. '
+fontsize: 10pt
 headcolor: 224190
+bibliography:
+  bba087522139f0e3c8da4e08ccb1fbcb: /var/folders/0h/x52cgrb14wlcpk4ny551485r0000gn/T//RtmpiqQWXU/file140ce23f49499.yaml
+nocite: '@Finlay2024, @Ridge2024, @Han2023, @Tacho-Pinot2023, @Finlay2023, @McEntee2023,
+  @McManus2022, @Fiancette2021'
+csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/vitae.csl
 
 ---
 
@@ -33,33 +33,11 @@ headcolor: 224190
 <!-- I am ready to educate the next generation of scientists and clinicians and lead my own group to make transformative discoveries. -->
 
 <!-- #\fontsize{11}{18}{8}{8} -->
-```{r install packages, include=FALSE}
-#install.packages("tidyverse")
-#install.packages("vitae")
-#install.packages("rorcid")
-#install.packages('scholar')
-#install.packages("readxl")
-#install.packages("knitr")
-#install.packages('tinytex')
-#install.packages("gridExtra")
-#tinytex::install_tinytex() # installs LaTeX - some issues on windows (but only some)
-# knitting for first time will take a while as it appears to install a bunch of tools for latex on run 1
-```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-pacs <- c('vitae','tidyverse','readr','readxl','rorcid','rmarkdown','knitr','scholar','cowplot','gridExtra','patchwork')
-lapply(pacs, library, character.only=TRUE) #%>% invisible()
-myor <- "0000-0001-8285-0903"
-myscol <- 'kQ6U7AkAAAAJ'
-col <- "#050583"
-```
 
-```{r google scholar, include=FALSE}
-l <- get_profile(myscol)
-p <- get_publications(myscol)
-ct <- get_citation_history(myscol)
-```
+
+
+
 
 <!-- # Snapshot -->
 <!-- My main research interest is in what genetic factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise in single cell RNA-sequencing, NGS, cell biology, *in vitro* and *in vivo* sciences and summarising complex data through effective data visualisation. -->
@@ -81,13 +59,15 @@ ct <- get_citation_history(myscol)
 -   Collaboration on *MRC* programme grant with Prof. Judith Allen. 
 
 # Past roles & Education
-```{r}
-emp <- read_excel("../data/employment_1_page.xlsx")
-emp <- emp[-c(1:2),] # remove descriptive title
-emp %>% arrange(desc(when)) %>% brief_entries(what =with , #subtitle
-                                              when = when,
-                                              with = where) #Rightmost)
-```
+\begin{cvhonors}
+	\cvhonor{}{Research Fellow, Supervisor: Prof Mark Little}{Trinity}{2021-2022}
+	\cvhonor{}{Informatics Training Scheme (Wellcome Trust TPA),Programming and Computational Approaches to Biology Modules}{University of Manchester}{2020}
+	\cvhonor{}{Research Associate, Supervisor: Prof Judith Allen.}{University of Manchester}{2017-2021}
+	\cvhonor{}{Lecturer (teaching relief post), School of Biochemistry and Immunology}{Trinity}{2016-2017}
+	\cvhonor{}{Post-doctoral Researcher, Supervisor: Prof Kingston HG Mills.}{Trinity}{2013-2016}
+	\cvhonor{}{PhD in Immunology, Immune modulation by the helminth Parasite Fasciola hepatica}{Trinity}{2013}
+	\cvhonor{}{BA(Mod) in Natural Sciences, Major: Biochemisty with Immunology, Grade: 1:1}{Trinity}{2007}
+\end{cvhonors}
 
 <!-- # Education -->
 <!-- ```{r} -->
@@ -105,17 +85,26 @@ emp %>% arrange(desc(when)) %>% brief_entries(what =with , #subtitle
 # Funding
 
 <!-- ## Awarded -->
-```{r}
-
-gra <- read_excel("../data/grants.xlsx")
-gra<- gra[-c(1:2),] # remove descriptive title
-gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
-                         when = when, # to right
-                         why = why , # sub-subtitle
-                         with = with, # Major title
-                         where =  where) #Rightmost)
-
-```
+\begin{cventries}
+	\cventry{457K, PI}{SFI-Pathways Programme}{Science Foundation Ireland}{2024-2028}{\begin{cvitems}
+\item Macrophage Activation and Transition in the Autoimmune Kidney (MacATAK): uncovering functional outcomes of macrophage differentiation in the inflamed kidney
+\end{cvitems}}
+	\cventry{20K, PI}{Dean’s Research Initiatives Fund}{Faculty of Health Sciences, TCD}{2024}{\begin{cvitems}
+\item Mapping human macrophage anti-microbial function in pleural infection
+\end{cvitems}}
+	\cventry{84K}{Enterprise Ireland-funded Industry collaboration}{Legend Biotech}{2024}{\begin{cvitems}
+\item Title withheld, scRNA-sequencing of blood cancer
+\end{cvitems}}
+	\cventry{10K Eur, Co-PI}{Building Engagements in Health Research Scheme}{Internal TCD}{2023}{\begin{cvitems}
+\item Understanding mast cells and their progenitors in Telangiectasia Macularis Eruptiva Perstans (TMEP)' 
+\end{cvitems}}
+	\cventry{2.26 Million GBP, Research Co-Investigator}{MR/V011235/1 Programme Grant}{Medical Research Council}{2021}{\begin{cvitems}
+\item “Macrophages in type 2 immunity: unravelling susceptibility and resistance to tissue nematode infection”. I co-wrote grant and provided scientific design and preliminary data. Awarded an honorary position at UoM to facilitate ongoing collaboration after leaving Manchester
+\end{cvitems}}
+	\cventry{10K Eur, Co-PI}{Building Engagements in Health Research Scheme}{Internal TCD}{2021}{\begin{cvitems}
+\item ‘Nanoparticle modulation of neutrophil and monocyte responses to ANCA’
+\end{cvitems}}
+\end{cventries}
 
 <!-- ## Funding - reserve list -->
 <!-- <!-- --> 
@@ -177,25 +166,11 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 <!-- ## Oral Presentations (details of 8X poster presentations availible in appendex) -->
 
-```{r}
-# pres <- read_excel("../data/presentations.xlsx")
-# pres<- pres[-c(1:2),] # remove descriptive title
-# pres  %>% arrange(desc(when)) %>% filter(what != 'Poster presentation') %>% brief_entries(
-#               what = with,# middle
-#               when = when,
-#               with = where)
-```
+
 
 <!-- ## Awards -->
 
-```{r}
-# awards <- read_excel("../data/awards.xlsx")
-# awards<- awards[-c(1:2),] # remove descriptive title
-# awards %>% arrange(desc(when))  %>% brief_entries(
-#               what = with ,# middle
-#               when = when  # left
-#     ) # right
-```
+
 
 ## Discipline Contributions
 
@@ -232,17 +207,7 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 <!-- ``` -->
 <!-- <!-- \newpage --> 
 
-```{r}
-# #long versions  
-# sup <- read_excel("../data/collaborations.xlsx")
-# sup<- sup[-c(1:2),] # remove descriptive title
-# sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
-#                          when = when, # to right
-#                          why = why , # sub-subtitle
-#                          with = with, # Major title
-#                          where =  where) #Rightmost)
 
-```
 
 
 <!-- # Teaching & Supervision -->
@@ -270,29 +235,10 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 <!-- ``` -->
 
-```{r}
-# #teaching long version 
-# t <- read_excel("../data/teaching.xlsx")
-# t<- t[-c(1:2),] # remove descriptive title
-# t  %>% arrange(desc(when)) %>% brief_entries(
-#               with= what ,# middle
-#               when = when,
-#               what = with# left
-#     ) # right
 
-```
 
 # Research leadership
-```{r}
-# for longer version of CV
-# sup <- read_excel("../data/supervison.xlsx")
-# sup<- sup[-c(1:2),] # remove descriptive title
-# sup  %>% arrange(desc(when)) %>% detailed_entries(what = what, #subtitle
-#                          when = when, # to right
-#                          why = why , # sub-subtitle
-#                          with = with, # Major title
-#                          where =  where) #Rightmost)
-```
+
 
 
 **Student projects** 15 projects designed and supervised across Trinity (12-15 weeks) and Manchester (6 months).
@@ -304,14 +250,9 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 <!-- \newpage -->
 
 # Publications (last 2 years)
-```{r}
-library(dplyr)
-#knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
 
-bibliography_entries("My Collection_3_year.bib") %>%
-  arrange(desc(issued))
-
-```
+::: {#refs-bba087522139f0e3c8da4e08ccb1fbcb}
+:::
 
 
 # Referee

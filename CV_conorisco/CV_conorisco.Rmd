@@ -16,7 +16,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv 
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician combining molecular, in vivo and translational research. "
+aboutme: "Cellular Immunologist and bioinformatician, combining molecular, in vivo and translational research. "
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -115,12 +115,10 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 
-## Funding - reserve list
+## Funding - under review
 <!-- -->
 
-  **SFI Pathways program 2022**, €425,000.
-    -   *Macrophage Activation and Transition in the Autoimmune Kidney (MacATAK): uncovering functional outcomes of macrophage differentiation in the inflamed kidney*.
-    -   Scored 4.25/5 in international review and recommended for funding. Placed on SFI reserve list for funding until Q2 2024.
+  **Research Doctorate Award** Trinity College Dublin. Application for a PhD Student, worth 122K
 
 # Presentations, Awards & contributions
 
@@ -149,13 +147,10 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
 ## media and commentry
 
 * [Commentry in *Immunity*: "Macrophages show up in style when Th2 lymphocytes organize their homecoming"](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
-
 * [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
-
 * Immunity paper featured on August 2023 edition of *Journal of Allergy and Clinical Immunology* News Beyond Our Pages column.
-
-#https://www.irishhealthpro.com/content/articles/show/name/irish-led-research-tackles-parasitic-worms-that-infect-millions
-#https://medicalxpress.com/news/2023-03-tackle-parasitic-worms-infect-millions.html
+* [Irish Health Professional 2023](https://www.irishhealthpro.com/content/articles/show/name/irish-led-research-tackles-parasitic-worms-that-infect-millions)
+* [Medical Express 2023 ](https://medicalxpress.com/news/2023-03-tackle-parasitic-worms-infect-millions.html)
 
 
 ## Awards
