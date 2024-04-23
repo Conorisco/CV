@@ -119,6 +119,8 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 <!-- -->
 
   **Research Doctorate Award** Trinity College Dublin. Application for a PhD Student, worth 122K
+  
+  **Building Engagements in health Research** Trinity Translational Medicines Insitute, 10K
 
 # Presentations, Awards & contributions
 

@@ -20,7 +20,7 @@ aboutme: 'Cellular Immunologist and bioinformatician combining molecular, in viv
 fontsize: 10pt
 headcolor: 224190
 bibliography:
-  bba087522139f0e3c8da4e08ccb1fbcb: /var/folders/0h/x52cgrb14wlcpk4ny551485r0000gn/T//RtmpiqQWXU/file140ce23f49499.yaml
+  bba087522139f0e3c8da4e08ccb1fbcb: /var/folders/0h/x52cgrb14wlcpk4ny551485r0000gn/T//RtmpmZpyQq/file1f034169a2a9.yaml
 nocite: '@Finlay2024, @Ridge2024, @Han2023, @Tacho-Pinot2023, @Finlay2023, @McEntee2023,
   @McManus2022, @Fiancette2021'
 csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/vitae.csl
