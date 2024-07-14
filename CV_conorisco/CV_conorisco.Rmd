@@ -1,7 +1,7 @@
 ---
 name: Conor M.
 surname: Finlay
-position: "Senior Research Fellow"
+position: "Principal Investigator"
 address: "Trinity Translational Medicine Institute, Trinity College Dublin"
 phone: +353 857148825
 profilepic: Conor.jpeg
@@ -65,12 +65,10 @@ My main research interest is in what genetic factors control mononuclear phagocy
 
 ##  Senior Research Fellow, Trinity College Dublin (2022-present)
 
--   HEALED consortium - molecular biology and sequencing lead (with Aideen Long), since August 2023
--   TCD Omics - Single cell RNA-sequencing platform technology (founder and lead), since 2021 
--   COVID-19 SFI-funded strategic partnership - transnational immunology ,up to mid-2023
--   Trinity Kidney Health Centre - lab management, student supervision and biomarker research (with Mark Little), up to mid-2023
--   Multi-modal clinical data analysis (with Mark Little), up to mid-2023
--   Co-supervising longitudinal immune cell phenotyping transnational study, PARADISE project, (with Mark Little), 2022-present
+-   Principal Investigator of the Finlay laboratory (Immune cell biology and bioinformatics, 2 PhD students), since 2024
+-   Founder and scientific director of TCD Omics - Single cell RNA-sequencing core facility, since 2021 
+-   Trinity Kidney Centre clinical collaboration with Prof. Mark Little including co-supervising students working on immunophenotyping and biomarker projects, 2022-present
+-   Pleural effusion clinical collaboration with Associate Prof. Luara Gleeson, 2023-present
 
 ## Honorary Research Fellow, University of Manchester (2021-present)
 
@@ -114,14 +112,6 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 
 ```
-
-## Funding - under review
-<!-- -->
-
-  **Research Doctorate Award** Trinity College Dublin. Application for a PhD Student, worth 122K
-  
-  **Building Engagements in health Research** Trinity Translational Medicines Insitute, 10K
-
 # Presentations, Awards & contributions
 
 ## Oral Presentations
@@ -305,7 +295,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
- **TCD Omics Core facility**.I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
+ **TCD Omics Core facility**. I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
  
 **Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project. I have pitched an idea to the St James hospital Patient Representative Group and received feedback on development of a research programme, lay abstract and patient information leaflet.
  
@@ -313,6 +303,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
 
 # Publications
+<sup>*</sup> (Co-)corresponding author or (co-)senior authorship
 ```{r}
 library(dplyr)
 #knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
@@ -321,10 +312,6 @@ bibliography_entries("My collection.bib") %>%
   arrange(desc(issued))
 
 ```
-
-## Publications in review (as co-final author)
-
-* Dwivedi, A., Ui Mhaonaigh, A., Carrol, M., Little, M and Finlay, C.M. low density neutrophils in SARS-Cov 2 
 
 # Referees
 ```{r}
@@ -507,7 +494,7 @@ I have a broad skillet that includes animal research, translational research, mo
 
 **Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
 
-**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparation, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays.
+**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparation, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. FFPE nucleic acid isolation.
 
 **Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), lab management, inventory, ordering, health and safety.
 

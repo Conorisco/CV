@@ -10,7 +10,7 @@ twitter: conorisco
 github: conorisco
 googlescholar: kQ6U7AkAAAAJ
 orcid: 0000-0001-8285-0903
-date: March 2024
+date: April 2024
 output:
   vitae::awesomecv:
     keep_md: yes
@@ -20,9 +20,9 @@ aboutme: 'Cellular Immunologist and bioinformatician combining molecular, in viv
 fontsize: 10pt
 headcolor: 224190
 bibliography:
-  bba087522139f0e3c8da4e08ccb1fbcb: /var/folders/0h/x52cgrb14wlcpk4ny551485r0000gn/T//RtmpmZpyQq/file1f034169a2a9.yaml
-nocite: '@Finlay2024, @Ridge2024, @Han2023, @Tacho-Pinot2023, @Finlay2023, @McEntee2023,
-  @McManus2022, @Fiancette2021'
+  5d9a307da7b59affe983036a3fa2d8f5: /var/folders/0h/x52cgrb14wlcpk4ny551485r0000gn/T//RtmphRsiwa/file117dc23a0dbee.yaml
+nocite: '@Ridge2024, @Han2023, @Tacho-Pinot2023, @Finlay2023, @McEntee2023, @Fiancette2021,
+  @Cunningham2021, @Finlay2020, @PMID:32145033'
 csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/vitae.csl
 
 ---
@@ -45,14 +45,16 @@ csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/
 
 <!-- # Current roles -->
 
+
 ##  Senior Research Fellow, Trinity College Dublin (2022-present)
 
+-   SFI-Pathways Programme Fellow (PI, starting August 2024)
+-   TCD Omics - Single cell RNA-sequencing core service (founder and scientific director), since 2021 
 -   HEALED consortium - molecular biology and sequencing lead (with Aideen Long), since August 2023
--   TCD Omics - Single cell RNA-sequencing platform technology (founder and lead), since 2021 
 -   COVID-19 SFI-funded strategic partnership - transnational immunology ,up to mid-2023
--   Trinity Kidney Health Centre - lab management, student supervision and biomarker research (with Mark Little), up to mid-2023
+-   Trinity Kidney Centre - lab management, student supervision(with Mark Little), up to mid-2023
 -   Multi-modal clinical data analysis (with Mark Little), up to mid-2023
--   Co-supervising longitudinal immune cell phenotyping transnational study, PARADISE project, (with Mark Little), 2022-present
+-   Co-supervising longitudinal immune cell phenotyping study, PARADISE project, (with Mark Little), 2022-present
 
 ## Honorary Research Fellow, University of Manchester (2021-present)
 
@@ -117,9 +119,9 @@ csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/
 
 ## Presentations
 
-* [4 invited speaker presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
-* [13 conference oral presentations, selected from abstract ](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
-* [8 conference poster presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf)  
+* [4 invited speaker presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf)
+* [13 conference oral presentations, selected from abstract ](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf), * [8 conference poster presentations](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf)   
+
 
 ## Awards and media
 
@@ -174,7 +176,7 @@ csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/
 
 ## Discipline Contributions
 
-* Reviewed articles for 5 journals. 
+* Reviewed articles for 6 journals. 
 * Reviewed grants for 4 funding bodies
 * Sat on 3 researcher interview panels
 * Co-Inventor on a patent for Trinity Spin-out (Parvalis Tx)
@@ -189,10 +191,6 @@ csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/
 <!--                 # left -->
 <!--     ) # right -->
 <!-- ``` -->
-
-# Active Collaborations
-
-15 active collaborations, with groups in NIH, Leiden, Manchester, RCSI, Trinity college Dublin, St James' hospital.
 
 <!-- ```{r} -->
 <!-- #short version -->
@@ -237,26 +235,24 @@ csl: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/vitae/
 
 
 
-# Research leadership
+# Research leadership and collaborations
 
 
 
-**Student projects** 15 projects designed and supervised across Trinity (12-15 weeks) and Manchester (6 months).
-
-**Direct line manager** for 2 research assistants, thesis comitee for 2 students.
+**Student projects** 16 projects designed and supervised across Trinity (12-15 weeks) and Manchester (6 months). Currently co-suppervise a IRC-funded PhD student.
 
  **TCD Omics Core facility**. I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’.
  
+**16 active collaborations**, with groups in NIH, Leiden, Manchester, RCSI, Trinity college Dublin, St James' hospital.
+ 
 <!-- \newpage -->
 
-# Publications (last 2 years)
+# Selected publications (last 3 years)
 
-::: {#refs-bba087522139f0e3c8da4e08ccb1fbcb}
+::: {#refs-5d9a307da7b59affe983036a3fa2d8f5}
 :::
-
-
 # Referee
 
 [**Prof Judi Allen**](mailto:judi.allen@manchester.ac.uk ),	Professor of Immunobiology;	Lydia Becker Institute	University of Manchester
 
-Full details on research, teaching and contributions are available on my [long-form CV posted on GitHub (here)](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
+[Up to date long-form CV availible on GitHub (here)](https://github.com/Conorisco/CV/raw/main/CV_conorisco/CV_conorisco_AA2023.pdf) 
