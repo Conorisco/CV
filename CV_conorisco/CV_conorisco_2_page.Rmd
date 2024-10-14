@@ -105,7 +105,7 @@ emp %>% arrange(desc(when)) %>% brief_entries(what =with , #subtitle
 <!-- ``` -->
 
 # Funding
-
+I have received a total funding of 684,106 Euro in funding to my lab in Trinity. In the UK I co-wrote a programme grant (as Research Co-Investigator) on which I now collaborate.
 <!-- ## Awarded -->
 ```{r}
 

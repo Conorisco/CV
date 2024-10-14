@@ -308,7 +308,8 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 library(dplyr)
 #knitr::write_bib(c("vitae", "tibble"), "My collection.bib")
 
-bibliography_entries("My collection.bib") %>%
+#bibliography_entries("My collection.bib") %>%
+  bibliography_entries("My Collection_zotero.bib") %>%
   arrange(desc(issued))
 
 ```
