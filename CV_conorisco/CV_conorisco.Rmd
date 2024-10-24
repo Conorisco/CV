@@ -1,7 +1,7 @@
 ---
 name: Conor M.
 surname: Finlay
-position: "Principal Investigator"
+position: "Princible Investigator"
 address: "Trinity Translational Medicine Institute, Trinity College Dublin"
 phone: +353 857148825
 profilepic: Conor.jpeg
@@ -12,11 +12,10 @@ github: conorisco
 googlescholar: kQ6U7AkAAAAJ
 #headcolor:
 orcid: 0000-0001-8285-0903
-#linkedin: mariecurie
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::awesomecv 
+output: vitae::awesomecv
 #output: vitae::twentyseconds
-aboutme: "Cellular Immunologist and bioinformatician, combining molecular, in vivo and translational research. "
+aboutme: "Immunologist"
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -57,24 +56,56 @@ p <- get_publications(myscol)
 ct <- get_citation_history(myscol)
 ```
 
-# Snapshot
-My main research interest is in what genetic factors control mononuclear phagocyte (macrophage) differentiation during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise in single cell RNA-sequencing, NGS, cell biology, *in vitro* and *in vivo* sciences and summarising complex data through effective data visualisation.
+<!-- # Snapshot -->
+<!-- I am principle investigator of a research group that focuses on how we can  -->
+
+<!--  mononuclear phagocyte devlopment during inflammation on a single cell level and how this impacts on disease outcomes. I have expertise in single cell RNA-sequencing, NGS, cell biology, *in vitro* and *in vivo* sciences and summarising complex data through effective data visualisation. -->
 <!-- # SECTION 1 - applicant details -->
 
-# Current roles
+# Research Roles
 
-##  Senior Research Fellow, Trinity College Dublin (2022-present)
+<!-- -   Principal Investigator Finlay laboratory (Immune cell biology and bioinformatics, 2 PhD students), 2024-present -->
+<!-- -   Founder and scientific director of TCD Omics - Single cell RNA-sequencing core facility, 2021-present  -->
+<!-- -   Trinity Kidney Centre, immunophenotyping and biomarker research, 2022-present -->
+<!-- -   Pleural disease with Associate Prof. Luara Gleeson, 2023-present -->
+<!-- -   Mast cell biology, collaboration with Katie Ridge. 2022-present -->
+## Senior Research Fellow, Trinity College Dublin, 2023-present
+My group investigates innate immune cells in inflammation, combining molecular immunology, in vivo science and computational approaches to understand immune cell function in health and disease. Through leadership of TCD Omics and key clinical partnerships, we apply these approaches to understand human immune responses.
 
--   Principal Investigator of the Finlay laboratory (Immune cell biology and bioinformatics, 2 PhD students), since 2024
--   Founder and scientific director of TCD Omics - Single cell RNA-sequencing core facility, since 2021 
--   Trinity Kidney Centre clinical collaboration with Prof. Mark Little including co-supervising students working on immunophenotyping and biomarker projects, 2022-present
--   Pleural effusion clinical collaboration with Associate Prof. Luara Gleeson, 2023-present
+```{r}
+library(knitr)
+library(kableExtra)
+
+data <- data.frame(
+  Role = c("PI, Finlay Lab", "Scientific Director, TCD Omics", "Renal Research", "Pleural Disease Program", "Mast Cell Program"),
+  #Period = c("2024-present", "2021-present", "2022-present", "2023-present", "2022-present"),
+  Focus = c("Immune cell biology & bioinformatics", "Single cell RNA-seq facility", "Biomarker discovery", "Macrophage function", "Diagnostic development"),
+  Partners = c("3 PhD students", "TTMI-supported RA", "Prof. Mark Little, ADAPT", "Assoc. Prof. Laura Gleeson", "Ridge, Conlon, Moran"),
+  Outputs = c("Macrophage biology, computational immunology", "Core technology service", "Data analytics, translational research", "Translational immunology", "Clinical immunology")
+)
+
+# kable(data, format = "latex", booktabs = TRUE,
+#       col.names = c("Role", "Focus", "Team/Partners", "Key Outputs"))
+# 
+# kable(data, format = "latex", booktabs = TRUE) %>%
+#   kable_styling(latex_options = c("striped", "hold_position"))
+# 
+# kable(data, format = "latex", booktabs = TRUE) %>%
+#   column_spec(1:5, width = "3cm") %>%
+#   kable_styling(latex_options = c("hold_position"))
+#                 
+                
+kable(data, format = "latex", booktabs = TRUE) %>%
+  column_spec(1:5, width = "4cm") %>%
+  kable_styling(font_size = 9, latex_options = c("scale_down", "hold_position"))
+```
+
 
 ## Honorary Research Fellow, University of Manchester (2021-present)
 
--   Collaboration on *MRC* programme grant with Prof. Judith Allen. 
+-   Collaboration on *MRC* programme grant with Prof. Judith Allen. Pleural Macrophage biology.
 
-# Employment History
+# Past Employment History
 ```{r}
 emp <- read_excel("../data/employment.xlsx") 
 emp <- emp[-c(1:2),] # remove descriptive title
@@ -136,9 +167,9 @@ pres  %>% arrange(desc(when)) %>% filter(what == 'Poster presentation') %>% brie
               with = where)
 ```
 
-## media and commentry
+## Media and Commentary
 
-* [Commentry in *Immunity*: "Macrophages show up in style when Th2 lymphocytes organize their homecoming"](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
+* [Commentary in *Immunity*: "Macrophages show up in style when Th2 lymphocytes organize their homecoming"](https://www.cell.com/immunity/fulltext/S1074-7613(23)00175-9)
 * [Paper featured on The Immunology Podcast - Episode 51](https://www.immunologypodcast.com/ep-51-the-journey-of-cells-featuring-dr-doug-green)
 * Immunity paper featured on August 2023 edition of *Journal of Allergy and Clinical Immunology* News Beyond Our Pages column.
 * [Irish Health Professional 2023](https://www.irishhealthpro.com/content/articles/show/name/irish-led-research-tackles-parasitic-worms-that-infect-millions)
@@ -285,7 +316,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
 **Additional teaching duties** In 2016 I took on the academic duties for a Professor in TCD on teaching sabbatical. This included all aspects of the role, including practical supervision, assessment and marking, tutorials and administrative duties. I have organised visits for school students between 2013-2016. I sit on thesis committees for 3 PhD students.
 
-# Outreach, organisation, and PPI
+# Outreach, organisation and PPI
 
 **Discover Research Night**, Dublin Sep 2014. Marie Skłodowska-Curie-funded. I was the event organiser responsible for public engagement at Trinity Biomedical Sciences Institute, organising a team of 50 researchers in leading themed tours of scientific facilities. We were the most subscribed event of Dublin Research Night (\>500 members of the public).
 
@@ -298,6 +329,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
  **TCD Omics Core facility**. I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
  
 **Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project. I have pitched an idea to the St James hospital Patient Representative Group and received feedback on development of a research programme, lay abstract and patient information leaflet.
+ 
  
 <!-- \newpage -->
 
@@ -313,27 +345,9 @@ library(dplyr)
   arrange(desc(issued))
 
 ```
-
-# Referees
-```{r}
-ref <- read_excel("../data/referees.xlsx")
-ref<- ref[-c(1:2),] # remove descriptive title
-ref %>% detailed_entries(what = what, #subtitle
-                         when = when, # to right
-                        # why = why , # sub-subtitle
-                         with = with, # Major title
-                         where =  where) #Rightmost)
-```
-
-<!-- \newpage -->
-
-\newpage
-
-# Appendix
-
 ## Citation metrics
 
-```{r fig.height=2, fig.width=6}
+```{r fig.height=2, fig.width=8, dpi=300, dev='cairo_pdf'}
 p1<- ggplot(ct, aes(year, cites)) +
     geom_segment(aes(xend = year, yend = 0), size=1, color='darkgrey') +
   ylab('Citations') +
@@ -360,8 +374,52 @@ p2 <- tableGrob(papers,theme = mytheme,rows = NULL)
 
 grid.arrange(p1, p2,
              nrow=1,
+             widths = c(0.4, 0.6),  # Adjust plot vs table width ratio
              as.table=TRUE)
 ```
+
+
+
+# Referees
+```{r}
+ref <- read_excel("../data/referees.xlsx")
+ref<- ref[-c(1:2),] # remove descriptive title
+ref %>% detailed_entries(what = what, #subtitle
+                         when = when, # to right
+                        # why = why , # sub-subtitle
+                         with = with, # Major title
+                         where =  where) #Rightmost)
+```
+
+<!-- \newpage -->
+
+\newpage
+
+# Appendix
+
+## Skills
+
+I have a broad skillset that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that enables me to design and manage research projects from a multidisciplinary point of view.
+
+ | Category | Primary Skills | Tools & Technologies |
+|----------|---------------|---------------------|
+| Research & Analysis | Translational Research • Clinical Data Analysis • Animal Models • Patient Stratification | REDCap • Mass Cytometry • Flow Cytometry (30+ parameters) • ELISA |
+| Programming | R (Fluent) • Python (Intermediate) • Unix/Bash (Basic) | RMarkdown • Git • HPC |
+| Bioinformatics | Single Cell RNA-seq • Bulk RNA-seq • Mass Cytometry Analysis • Trajectory Analysis | Seurat • DESeq2 • limma • SCENIC • Spectre |
+| Molecular Biology | NGS Library Prep • DNA/RNA Workflows • Proteomics • Cell Culture | Illumina NovaSeq • 10X Genomics • BD Rhapsody • TapeStation |
+| Laboratory | Cell Sorting • Tissue Processing • Blood Processing • Core Facility Management | BD FACSAria • Mass Cytometry • Multiparameter Flow |
+
+<!-- **Translational research and clinical data analysis**: Ability to manage and interact with multidisciplinary teams of clinicians, scientists, biobanking teams, biostatisticians and bioinformaticians. Experience with biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. -->
+
+<!-- **Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 7 years), Python (Intermediate, 5 years), RMarkdown (Intermediate, 5 years) Unix/Bash (Beginner). Data analysis/visualisation in R. Other programs: FlowJo and Prism and Adobe Illustrator. Database creation and maintenance. R Shiny Apps. high performance computing (basic). -->
+
+<!-- **Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (7 years experience). Mass cytometry analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanostring analysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations). -->
+
+<!-- **Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intrapleural injections). -->
+
+<!-- **Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequencing (Novaaseq 6000)  sample preparation, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. FFPE nucleic acid isolation. -->
+
+<!-- **Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), lab management, inventory, ordering, health and safety. -->
 
 
 ## Datasets, code & websites 
@@ -483,21 +541,9 @@ classes %>%
 
 
 
-## Skills
 
-I have a broad skillet that includes animal research, translational research, molecular biology, bioinformatics and clinical data analysis that enable me to design and manage research projects from a multidisciplinary point of view.
 
-**Translational research and clinical data analysis**: Ability to mange and interact with multidisciplinary teams of clinicians, scientists, biobanking teams, biostatisticians and bioinformatians. Experience with biobanking, clinical database management (RedCap).  Patient stratification, data curating and multi-modal integration: data analysis of longitudinal clinical datasets with 100s of clinical fields and 10000s of patients. Writing reports in RMarkdown to be read by clinicians and scientists.
 
-**Programming, Data analysis, Statistics & Visualisation**: R (Fluent, 7 years), Python (Intermediate, 5 years), RMarkdown (Intermediate, 5 years) Unix/Bash (Beginner). Data analysis/visualisation in and in R. Other programs: FlowJo and Prism, Adobe Illustrator, biostatistics and its application to experimental design and interpretation. Database creation and maintenance. R Shiny Apps. high-performance computing (basic).
-
-**Bioinformatics** Expert in summarising take-home messages from single cell RNA-sequencing analysis in R and python (7 years experience). Mass cytometery analysis (FLowCore, Spectre). Analysis of microarray/bulk RNA-seq datasets analysis in R (limma, DESeq2), nCounter nanosting anlaysis. Pathway analysis (IPA, GO), regulatory network analysis (SCENIC), trajectory inference (Slingshot, RNA velocity), clustering (hierarchical and graph-based methods), dimension reduction (UMAP, Trimap, PCA), basic experience with machine learning (non linear, random forest) and systems biology (graphs, networks, logical modelling and differential equations).
-
-**Animal models of Disease**: 12 years experience in *in vivo* model design: Autoimmunity (Experimental autoimmune encephalomyelitis, DSS-colitis, Imiquimod-induced inflammation), Cancer (B16 melanoma, CT26 lung), Infection (*L. sigmodontis*,*B. pertussis*, *F. hepatica*), Allergy (Allergen airway hypersensitivity) and general in vivo manipulation (Cell transfers, Irradiation/bone marrow transplantation peritonitis models, circadian rhythm modulation, cytokine administration, intraplueral injections).
-
-**Molecular biology** NGS library preparation (Illumina) including single cell RNA-sequencing (BD Rhapsody and 10X genomics), Illumina sequecing (Novaaseq 6000)  sample preparation, study design for NGS, DNA & RNA extraction, RT-qPCR, nucleic acid QC (TapeStation, Qubit), PCR. Label free quantitative proteomics, bulk RNA-seq and ATAC-seq library preparation, enzyme assays. FFPE nucleic acid isolation.
-
-**Laboratory techniques**: Expert in cell culture, cell sorting (BD Machines), high parameter (30+) flow cytometry, mass cytometry (including panel design, optimisation, storage, batch correction), tissue digestion, ELISA, cell isolation from blood (Whole blood, granulocytes/neutrophils, PBMC), lab management, inventory, ordering, health and safety.
 
 ```{r eval=FALSE}
 tribble(
