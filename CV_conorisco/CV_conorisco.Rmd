@@ -1,7 +1,7 @@
 ---
 name: Conor M.
 surname: Finlay
-position: "Princible Investigator"
+position: "Research Assistant Professor"
 address: "Trinity Translational Medicine Institute, Trinity College Dublin"
 phone: +353 857148825
 profilepic: Conor.jpeg
@@ -20,6 +20,8 @@ aboutme: "Immunologist"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
 headcolor: 224190
+header-includes:
+  - \providecommand{\pandocbounded}[1]{#1}
 ---
 
 <!-- # Career profile -->
@@ -69,7 +71,7 @@ ct <- get_citation_history(myscol)
 <!-- -   Trinity Kidney Centre, immunophenotyping and biomarker research, 2022-present -->
 <!-- -   Pleural disease with Associate Prof. Luara Gleeson, 2023-present -->
 <!-- -   Mast cell biology, collaboration with Katie Ridge. 2022-present -->
-## Senior Research Fellow, Trinity College Dublin, 2023-present
+## Research Assistant Professor, Trinity College Dublin, 2025-present
 My group investigates innate immune cells in inflammation, combining molecular immunology, in vivo science and computational approaches to understand immune cell function in health and disease. Through leadership of TCD Omics and key clinical partnerships, we apply these approaches to understand human immune responses.
 
 ```{r}
@@ -77,7 +79,7 @@ library(knitr)
 library(kableExtra)
 
 data <- data.frame(
-  Role = c("PI, Finlay Lab", "Scientific Director, TCD Omics", "Renal Research", "Pleural Disease Program", "Mast Cell Program"),
+  Role = c("PI, Finlay Lab", "Acedemic Director, TCD Omics", "Renal Research", "Pleural Disease Program", "Mast Cell Program"),
   #Period = c("2024-present", "2021-present", "2022-present", "2023-present", "2022-present"),
   Focus = c("Immune cell biology & bioinformatics", "Single cell RNA-seq facility", "Biomarker discovery", "Macrophage function", "Diagnostic development"),
   Partners = c("3 PhD students", "TTMI-supported RA", "Prof. Mark Little, ADAPT", "Assoc. Prof. Laura Gleeson", "Ridge, Conlon, Moran"),
@@ -143,6 +145,9 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
                          where =  where) #Rightmost)
 
 ```
+## Under review
+2025 Irish Cancer Society Seed award (50K)
+
 # Presentations, Awards & contributions
 
 ## Oral Presentations
@@ -354,7 +359,7 @@ p1<- ggplot(ct, aes(year, cites)) +
   labs(caption = "Citations per year. Source: Google Scholar") +
    annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
      annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
-  scale_x_continuous(breaks = c(2010:2023)) +
+  scale_x_continuous(breaks = c(2010:2025)) +
   geom_point(size=3, color= col) +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank(),
