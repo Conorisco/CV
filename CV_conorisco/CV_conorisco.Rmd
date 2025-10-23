@@ -3,7 +3,7 @@ name: Conor M.
 surname: Finlay
 position: "Research Assistant Professor"
 address: "Trinity Translational Medicine Institute, Trinity College Dublin"
-phone: +353 857148825
+#phone: +353 857148825
 profilepic: Conor.jpeg
 #www: "github.com/Conorisco"
 email: "cofinlay@tcd.ie; conor.finlay@manchester.ac.uk"
