@@ -67,23 +67,23 @@ ct <- get_citation_history(myscol)
 # Research Roles
 
 <!-- -   Principal Investigator Finlay laboratory (Immune cell biology and bioinformatics, 2 PhD students), 2024-present -->
-<!-- -   Founder and scientific director of TCD Omics - Single cell RNA-sequencing core facility, 2021-present  -->
+<!-- -   Founder and scientific director of Trinity Omics - Single cell RNA-sequencing core facility, 2021-present  -->
 <!-- -   Trinity Kidney Centre, immunophenotyping and biomarker research, 2022-present -->
 <!-- -   Pleural disease with Associate Prof. Luara Gleeson, 2023-present -->
 <!-- -   Mast cell biology, collaboration with Katie Ridge. 2022-present -->
 ## Research Assistant Professor, Trinity College Dublin, 2025-present
-My group investigates innate immune cells in inflammation, combining molecular immunology, in vivo science and computational approaches to understand immune cell function in health and disease. Through leadership of TCD Omics and key clinical partnerships, we apply these approaches to understand human immune responses.
+My group investigates innate immune cells in inflammation, combining molecular immunology, in vivo science and computational approaches to understand immune cell function in health and disease. 
 
 ```{r}
 library(knitr)
 library(kableExtra)
 
 data <- data.frame(
-  Role = c("PI, Finlay Lab", "Acedemic Director, TCD Omics", "Renal Research", "Pleural Disease Program", "Mast Cell Program"),
+  Role = c("PI, Finlay Lab", "Acedemic Director, Trinity Omics", "Renal Research", "Pleural Disease Program"),
   #Period = c("2024-present", "2021-present", "2022-present", "2023-present", "2022-present"),
-  Focus = c("Immune cell biology & bioinformatics", "Single cell RNA-seq facility", "Biomarker discovery", "Macrophage function", "Diagnostic development"),
-  Partners = c("3 PhD students", "TTMI-supported RA", "Prof. Mark Little, ADAPT", "Assoc. Prof. Laura Gleeson", "Ridge, Conlon, Moran"),
-  Outputs = c("Macrophage biology, computational immunology", "Core technology service", "Data analytics, translational research", "Translational immunology", "Clinical immunology")
+  Focus = c("Immune cell biology & bioinformatics", "Single cell RNA-seq facility", "Biomarker discovery", "Macrophage function"),
+  Partners = c("3 PhD students", "TTMI-supported RA", "Prof. Mark Little, ADAPT", "Assoc. Prof. Laura Gleeson"),
+  Outputs = c("Macrophage biology, computational immunology", "Core technology service", "Data analytics, translational research", "Translational immunology")
 )
 
 # kable(data, format = "latex", booktabs = TRUE,
@@ -229,9 +229,13 @@ rev  %>% arrange(desc(when)) %>% brief_entries(
 ```
 
 # Active Collaborations
+
+*Past Collaborations listed in Publications* 
 ```{r}
 #short version
   sup <- read_excel("../data/collaborations.xlsx")
+
+sup <- sup %>% filter(Active == "Y")
 sup<- sup[-c(1:2),] # remove descriptive title
 sup  %>% arrange(desc(when)) %>% detailed_entries(
   #what = what, #subtitle
@@ -331,7 +335,7 @@ sup  %>% arrange(desc(when))  %>% brief_entries(
 
 **School talk**, Oaklands Community College, Edenderry Co. Offaly, 2021. "The life of a scientist".
 
- **TCD Omics Core facility**. I have established formal pipelines for a single cell RNA-sequencing core service ‘TCD Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
+ **Trinity Omics Core facility**. I have established formal pipelines for a single cell RNA-sequencing core service ‘Trinity Omics’. I have successfully lobbied my institute to fund a research assistant to support the service under my supervision. 
  
 **Patient involvement** I have worked alongside patient representatives for Vasculitis Ireland as part of the PARADISE project. I have pitched an idea to the St James hospital Patient Representative Group and received feedback on development of a research programme, lay abstract and patient information leaflet.
  
