@@ -146,7 +146,9 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 
 ```
 ## Under review
-2025 Irish Cancer Society Seed award (50K)
+
+* 2025 HRCI HRB 300K, outcome July 2026
+* 2025 HRB ILP 430K, outcome July 2026
 
 # Presentations, Awards & contributions
 
