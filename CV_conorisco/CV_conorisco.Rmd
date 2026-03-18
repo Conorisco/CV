@@ -15,7 +15,7 @@ orcid: 0000-0001-8285-0903
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
 #output: vitae::twentyseconds
-aboutme: "Immunologist"
+#aboutme: "Immunologist"
 #docname: "Conor Finlay CV.pdf"
 #headcolor: 	050583
 fontsize: 10pt # be aware thea LaTeX has limitations and cannot make text less than 10pt
@@ -147,7 +147,6 @@ gra %>% arrange(desc(when))  %>% detailed_entries(what = what, #subtitle
 ```
 ## Under review
 
-* 2025 HRCI HRB 300K, outcome July 2026
 * 2025 HRB ILP 430K, outcome July 2026
 
 # Presentations, Awards & contributions
@@ -219,6 +218,7 @@ awards %>% arrange(desc(when))  %>% brief_entries(
 ```
 
 ## Discipline Contributions
+
 ```{r}
 rev <- read_excel("../data/reviewing.xlsx")
 rev<- rev[-c(1:2),] # remove descriptive title
@@ -365,7 +365,7 @@ p1<- ggplot(ct, aes(year, cites)) +
   labs(caption = "Citations per year. Source: Google Scholar") +
    annotate("text", x=2013, y=150, label= paste('h-index:', l$h_index)) +
      annotate("text", x=2013, y=120, label= paste('i10-index:', l$i10_index)) +
-  scale_x_continuous(breaks = c(2010:2025)) +
+  scale_x_continuous(breaks = c(2010:2026)) +
   geom_point(size=3, color= col) +
   theme_cowplot(font_size = 10) +
   theme(axis.title.x = element_blank(),
